@@ -28,17 +28,3 @@ public class KeyForFrontDoor : MonoBehaviour
         }
     }
 }
-
-//    //Key collider
-//    public GameObject FrontDoor = false;
-//    //public BoxCollider FrontDoor_BoxCollider;
-
-//    private void Start()
-//{
-//    //FrontDoor_BoxCollider = GetComponent<BoxCollider>();
-//}
-
-//private void OnTriggerEnter(Collider other)
-//{
-//    FrontDoor.enabled = true;
-//}
