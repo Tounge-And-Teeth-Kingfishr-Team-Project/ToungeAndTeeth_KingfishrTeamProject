@@ -35,7 +35,6 @@ public class CandleScript : MonoBehaviour
         if (incorrect == true)
         {
             isLit = false;
-            //StartCoroutine(DelayAction());
             GetComponent<Renderer>().material.color = unlitColour;
             incorrect = false;
         }
@@ -48,6 +47,7 @@ public class CandleScript : MonoBehaviour
         //lights the candle when the player touches the candle
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Player touched candle");
             isLit = true;
             GetComponent<Renderer>().material.color = litColour;
             //increases the lit count and correct count in the candle manager
@@ -57,17 +57,5 @@ public class CandleScript : MonoBehaviour
         
     }
 
-    //public IEnumerator DelayAction()
-    //{
-
-        
-    //    yield return new WaitForSeconds(durationTime);
-        
-
-
-
-        
-    //    yield return new WaitForSeconds(cooldownTime);
-        
-    //}
+    
 }
