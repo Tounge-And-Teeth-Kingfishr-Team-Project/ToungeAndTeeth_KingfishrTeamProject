@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class KeyGet : MonoBehaviour
 {
-    public bool yellowKey;
+    
+    public KeyManager keyManager;
     void Start()
     {
         
@@ -18,7 +19,7 @@ public class KeyGet : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            yellowKey = true;
+            keyManager.yellowKey = true;
             Destroy(gameObject);
         }
     }
