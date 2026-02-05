@@ -5,6 +5,10 @@ public class KeyManager : MonoBehaviour
     public bool yellowKey;
     public bool pinkKey;
     public bool blueKey;
+    public DoorScript yellowDoor;
+    public DoorScript pinkDoor;
+    public DoorScript blueDoor;
+    
     void Start()
     {
         
