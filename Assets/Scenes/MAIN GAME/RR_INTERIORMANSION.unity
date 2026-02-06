@@ -711,6 +711,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec5a1c69cafb5b40805c26f2232f5a8, type: 3}
+--- !u!4 &636230030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4353496761065956250, guid: b861475fc49f8b746810dd1214cf8ee1, type: 3}
+  m_PrefabInstance: {fileID: 7813986659300612570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &912003758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3730667477990286462, guid: de1f7ac0ddc221f45a88ad5a027f180c, type: 3}
@@ -1119,6 +1124,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3618419449175330991, guid: 8f583c79d8af1024b91f5a544c824aee, type: 3}
   m_PrefabInstance: {fileID: 567528775}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322502119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322502120}
+  m_Layer: 0
+  m_Name: Candles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1322502120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322502119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 636230030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1335211369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1955,6 +1991,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1889928907291768071, guid: b861475fc49f8b746810dd1214cf8ee1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2081921858}
+    - targetCorrespondingSourceObject: {fileID: 4353496761065956250, guid: b861475fc49f8b746810dd1214cf8ee1, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1322502120}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3105689111456041603, guid: b861475fc49f8b746810dd1214cf8ee1, type: 3}
       insertIndex: -1
