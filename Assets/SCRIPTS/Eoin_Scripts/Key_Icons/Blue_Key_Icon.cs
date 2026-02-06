@@ -13,12 +13,12 @@ public class Blue_Key_Icon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyManager.blueKey == true)
+        if (keyManager.blueKey == true && !blueKeyKeyIcon.enabled)
         {
             blueKeyKeyIcon.enabled = true;
         }
 
-        if (keyManager.blueKey == false)
+        if (keyManager.blueKey == false && blueKeyKeyIcon.enabled)
         {
             blueKeyKeyIcon.enabled = false;
         }

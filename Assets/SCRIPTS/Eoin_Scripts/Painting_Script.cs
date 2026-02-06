@@ -5,7 +5,7 @@ public class Painting_Script : MonoBehaviour
     public Rigidbody rb;
     void Start()
     {
-        
+        rb.isKinematic = true;
     }
 
     // Update is called once per frame

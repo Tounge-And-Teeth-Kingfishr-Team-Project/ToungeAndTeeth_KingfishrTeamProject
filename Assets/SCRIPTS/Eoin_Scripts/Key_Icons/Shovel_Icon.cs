@@ -13,12 +13,12 @@ public class Shovel_Icon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyManager.shovel == true)
+        if (keyManager.shovel == true && !shovelIcon.enabled)
         {
             shovelIcon.enabled = true;
         }
 
-        if (keyManager.shovel == false)
+        if (keyManager.shovel == false && shovelIcon.enabled)
         {
             shovelIcon.enabled = false;
         }

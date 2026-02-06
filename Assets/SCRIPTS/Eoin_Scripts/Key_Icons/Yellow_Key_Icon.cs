@@ -13,12 +13,12 @@ public class Yellow_Key_Icon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyManager.yellowKey == true)
+        if (keyManager.yellowKey == true && !yellowKeyIcon.enabled)
         {
             yellowKeyIcon.enabled = true;
         }
 
-        if (keyManager.yellowKey == false)
+        if (keyManager.yellowKey == false && yellowKeyIcon.enabled)
         {
             yellowKeyIcon.enabled = false;
         }

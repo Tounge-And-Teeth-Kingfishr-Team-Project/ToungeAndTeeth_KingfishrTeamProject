@@ -13,12 +13,12 @@ public class Pink_Key_Icon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyManager.pinkKey == true)
+        if (keyManager.pinkKey == true && !pinkKeyKeyIcon.enabled)
         {
             pinkKeyKeyIcon.enabled = true;
         }
 
-        if (keyManager.pinkKey == false)
+        if (keyManager.pinkKey == false && pinkKeyKeyIcon.enabled)
         {
             pinkKeyKeyIcon.enabled = false;
         }
