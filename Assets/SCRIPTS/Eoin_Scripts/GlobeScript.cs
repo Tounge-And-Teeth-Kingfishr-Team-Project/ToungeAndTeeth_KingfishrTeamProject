@@ -11,7 +11,7 @@ public class GlobeScript : MonoBehaviour
       GetComponent<Renderer>().material = unlitMat;
         correct = false;
         rotatePoint = 0f;
-        transform.Rotate(0f, -90f, 0f);
+        transform.Rotate(0f, 0f, 0f);
     }
 
     void Update()
