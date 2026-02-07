@@ -12,12 +12,18 @@ public class CandleScript : MonoBehaviour
     public bool correct;
     public bool incorrect;
     public CandleManager candleManager;
+
     public float durationTime;
     public bool cooldown;
     public float cooldownTime;
+
+    //public GameObject candleFlame;
+    //public GameObject candleFlameCorrect;
+    //public Transform fireballSpawnPoint;
     void Start()
     {
         //resets the candle at the start
+
         GetComponent<Renderer>().material.color = unlitColour;
         correct = false;
         incorrect = false;
@@ -47,6 +53,7 @@ public class CandleScript : MonoBehaviour
         //lights the candle when the player touches the candle
         if (other.gameObject.CompareTag("Player"))
         {
+            //flameSpawn();
             Debug.Log("Player touched candle");
             isLit = true;
             GetComponent<Renderer>().material.color = litColour;
@@ -57,5 +64,9 @@ public class CandleScript : MonoBehaviour
         
     }
 
-    
+    //private void flameSpawn()
+    //{
+    //    GameObject fireBall;
+    //    fireBall = Instantiate(candleFlame, fireballSpawnPoint.position, Quaternion.identity);
+    //}
 }
