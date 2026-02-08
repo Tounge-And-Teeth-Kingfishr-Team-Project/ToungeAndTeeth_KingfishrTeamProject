@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class KeyFragmentGet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public KeyManager keyManager;
+    public float fragmnetCount;
     void Start()
     {
         
@@ -12,5 +13,15 @@ public class KeyFragmentGet : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            fragmnetCount ++;
+            Destroy(gameObject);
+        }
+
     }
 }

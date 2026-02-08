@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KeyManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class KeyManager : MonoBehaviour
     public DoorScript yellowDoor;
     public DoorScript pinkDoor;
     public DoorScript blueDoor;
+
+
     
     void Start()
     {
