@@ -17,7 +17,7 @@ public class PinkKeyGet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && keyManager.pinkKey != true)
         {
             keyManager.pinkKey = true;
             Destroy(gameObject);

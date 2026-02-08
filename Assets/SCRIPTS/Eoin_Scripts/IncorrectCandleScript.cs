@@ -34,7 +34,7 @@ public class IncorrectCandleScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //lights the candle when the player touches the candle
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && isLit != true)
         {
             isLit = true;
             GetComponent<Renderer>().material.color = litColour;

@@ -17,7 +17,7 @@ public class BlueKeyGet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && keyManager.blueKey != true)
         {
             keyManager.blueKey = true;
             Destroy(gameObject);
