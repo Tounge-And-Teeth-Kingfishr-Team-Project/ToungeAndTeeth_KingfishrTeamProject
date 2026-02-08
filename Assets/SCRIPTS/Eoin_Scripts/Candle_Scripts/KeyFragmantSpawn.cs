@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.UIElements.Experimental;
+using System.Collections;
+using System.Collections.Generic;
 public class KeyFragmantSpawn : MonoBehaviour
 {
-    public GameObject keyFragment;
-    public Transform fragmnetSpawnPoint;
-    public CandleScript candleScript;
+   public CandleScript candleScript;
+    public float meltTime;
     void Start()
     {
         
@@ -15,14 +16,24 @@ public class KeyFragmantSpawn : MonoBehaviour
     {
         if (candleScript.correct == true)
         {
-            fragmentSpawn();
+            StartCoroutine(DelayAction());
+            
+        }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("KeyFragment"))
+        {
             Destroy(gameObject);
         }
     }
 
-    private void fragmentSpawn()
+    public IEnumerator DelayAction()
     {
-        GameObject fireBall;
-        fireBall = Instantiate(keyFragment, fragmnetSpawnPoint.position, Quaternion.identity);
+        
+        yield return new WaitForSeconds(meltTime);
+        Destroy(gameObject);
     }
 }

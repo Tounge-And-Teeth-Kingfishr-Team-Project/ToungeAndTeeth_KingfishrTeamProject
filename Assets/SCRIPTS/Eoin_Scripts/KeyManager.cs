@@ -10,7 +10,7 @@ public class KeyManager : MonoBehaviour
     public DoorScript yellowDoor;
     public DoorScript pinkDoor;
     public DoorScript blueDoor;
-
+    public KeyFragmentGet keyFragmnetGet;
 
     
     void Start()
@@ -21,6 +21,9 @@ public class KeyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (keyFragmnetGet.fragmnetCount == 3f)
+        {
+            blueKey = true;
+        }
     }
 }
