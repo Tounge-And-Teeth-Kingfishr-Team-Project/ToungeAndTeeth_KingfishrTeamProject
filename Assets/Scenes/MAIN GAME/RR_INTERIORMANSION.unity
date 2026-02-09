@@ -546,7 +546,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
 --- !u!136 &388984776
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -818,7 +817,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
 --- !u!136 &446085496
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2996,7 +2994,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
 --- !u!136 &1591685957
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4691,7 +4688,9 @@ MonoBehaviour:
   candleScript: {fileID: 301889043}
   meltTime: 3
   teleport: {fileID: 0}
-  keyFragment: {fileID: 1289143803}
+  keyFragment1: {fileID: 401065707}
+  keyFragment2: {fileID: 1289143803}
+  keyFragment3: {fileID: 1934520075}
   candle: {fileID: 1247662225570832908}
 --- !u!136 &1247662225570832910
 CapsuleCollider:
@@ -6396,7 +6395,9 @@ MonoBehaviour:
   candleScript: {fileID: 1514139571}
   meltTime: 3
   teleport: {fileID: 0}
-  keyFragment: {fileID: 401065707}
+  keyFragment1: {fileID: 401065707}
+  keyFragment2: {fileID: 1289143803}
+  keyFragment3: {fileID: 1934520075}
   candle: {fileID: 3637171081166515798}
 --- !u!136 &6944660842008263426
 CapsuleCollider:
@@ -7194,7 +7195,9 @@ MonoBehaviour:
   candleScript: {fileID: 200489781}
   meltTime: 3
   teleport: {fileID: 0}
-  keyFragment: {fileID: 1934520075}
+  keyFragment1: {fileID: 401065707}
+  keyFragment2: {fileID: 1289143803}
+  keyFragment3: {fileID: 1934520075}
   candle: {fileID: 8555920653080235511}
 --- !u!136 &8923300186461745330
 CapsuleCollider:
