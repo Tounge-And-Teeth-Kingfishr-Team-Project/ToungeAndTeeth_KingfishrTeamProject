@@ -622,15 +622,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.293732
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.573
+      value: 1.7819998
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4133023
+      value: 7.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1307,8 +1307,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.072326355, y: 0.106586106, z: 0.067005366}
-  m_Center: {x: -0.000015684962, y: -0.007503372, z: 0.022651091}
+  m_Size: {x: 0.09119327, y: 0.15737467, z: 0.067005366}
+  m_Center: {x: -0.0003254056, y: -0.008770042, z: 0.022651091}
 --- !u!1001 &623705433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2435,6 +2435,8 @@ MonoBehaviour:
   fragmnetCount: 0
   fragmnetSpawnPoint: {fileID: 582814750731277182}
   candleScript: {fileID: 301889043}
+  spawnTime: 0
+  isSpawned: 0
 --- !u!1001 &1299370759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2443,6 +2445,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7222716646404217692, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
+      propertyPath: meltTime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: -7222716646404217692, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: keyManager
       value: 
@@ -2457,15 +2463,15 @@ PrefabInstance:
       objectReference: {fileID: 6944660842008263424}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.293732
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.573
+      value: 1.7819998
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4133023
+      value: 7.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2678,15 +2684,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.293732
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.573
+      value: 1.782
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4133023
+      value: 7.78
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3164,6 +3170,8 @@ MonoBehaviour:
   fragmnetCount: 0
   fragmnetSpawnPoint: {fileID: 1719559173}
   candleScript: {fileID: 1514139571}
+  spawnTime: 0
+  isSpawned: 0
 --- !u!1001 &1880316477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3566,6 +3574,8 @@ MonoBehaviour:
   fragmnetCount: 0
   fragmnetSpawnPoint: {fileID: 8923300186461745328}
   candleScript: {fileID: 200489781}
+  spawnTime: 0
+  isSpawned: 0
 --- !u!1 &1985822973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3105689111456041603, guid: b861475fc49f8b746810dd1214cf8ee1, type: 3}
@@ -4404,7 +4414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247662225570832908}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.724, y: 0.274, z: 0.891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4677,6 +4687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candleScript: {fileID: 301889043}
   meltTime: 3
+  teleport: {fileID: 0}
+  keyFragment: {fileID: 1289143803}
+  candle: {fileID: 1247662225570832908}
 --- !u!136 &1247662225570832910
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6379,6 +6392,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candleScript: {fileID: 1514139571}
   meltTime: 3
+  teleport: {fileID: 0}
+  keyFragment: {fileID: 401065707}
+  candle: {fileID: 3637171081166515798}
 --- !u!136 &6944660842008263426
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7174,6 +7190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candleScript: {fileID: 200489781}
   meltTime: 3
+  teleport: {fileID: 0}
+  keyFragment: {fileID: 1934520075}
+  candle: {fileID: 8555920653080235511}
 --- !u!136 &8923300186461745330
 CapsuleCollider:
   m_ObjectHideFlags: 0

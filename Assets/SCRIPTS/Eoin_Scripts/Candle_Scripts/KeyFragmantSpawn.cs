@@ -4,11 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 public class KeyFragmantSpawn : MonoBehaviour
 {
-   public CandleScript candleScript;
+    public CandleScript candleScript;
     public float meltTime;
+    public Transform teleport;
+    public GameObject keyFragment;
+    public GameObject candle;
     void Start()
     {
-        
+        keyFragment.SetActive(!keyFragment.activeSelf);
     }
 
     // Update is called once per frame
@@ -26,7 +29,7 @@ public class KeyFragmantSpawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("KeyFragment"))
         {
-            Destroy(gameObject);
+            candle.SetActive(!candle.activeSelf);
         }
     }
 
@@ -34,6 +37,7 @@ public class KeyFragmantSpawn : MonoBehaviour
     {
         
         yield return new WaitForSeconds(meltTime);
+        keyFragment.SetActive(!keyFragment.activeSelf);
         Destroy(gameObject);
     }
 }
