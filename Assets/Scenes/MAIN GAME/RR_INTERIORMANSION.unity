@@ -147,7 +147,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
   candleManager: {fileID: 7751506943873590263}
   durationTime: 0
   cooldown: 0
@@ -332,7 +331,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
   candleManager: {fileID: 7751506943873590263}
   durationTime: 0
   cooldown: 0
@@ -625,15 +623,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.748
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.636
+      value: 1.7819998
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.283
+      value: 7.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 966496664625877037, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2467,15 +2465,15 @@ PrefabInstance:
       objectReference: {fileID: 6944660842008263424}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.112
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.344
+      value: 1.7819998
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.9
+      value: 7.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 4039136583912804995, guid: db8d76a0757b2564c9a21ec9d06e8677, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2688,15 +2686,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.582
+      value: -17.675
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.371
+      value: 1.782
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.202
+      value: 7.78
       objectReference: {fileID: 0}
     - target: {fileID: 8895940190731382944, guid: 3f8fba5566b470d4198bfa45a88e03ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2943,7 +2941,6 @@ MonoBehaviour:
   isLit: 0
   correct: 0
   incorrect: 0
-  incorrectTime: 1
   candleManager: {fileID: 7751506943873590263}
   durationTime: 0
   cooldown: 0
@@ -4670,8 +4667,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 582814750731277182}
+  - component: {fileID: 1247662225570832909}
   - component: {fileID: 1247662225570832910}
-  - component: {fileID: 1247662225570832911}
   m_Layer: 0
   m_Name: MeltedCandle2
   m_TagString: Untagged
@@ -4679,6 +4676,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1247662225570832909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247662225570832908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8621787fbddad4148901fa76deaf1123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candleScript: {fileID: 301889043}
+  meltTime: 3
+  teleport: {fileID: 0}
+  keyFragment: {fileID: 1289143803}
+  candle: {fileID: 1247662225570832908}
 --- !u!136 &1247662225570832910
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4702,25 +4716,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1247662225570832911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247662225570832908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8621787fbddad4148901fa76deaf1123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candleScript: {fileID: 301889043}
-  meltTime: 3
-  teleport: {fileID: 0}
-  keyFragment1: {fileID: 401065707}
-  keyFragment2: {fileID: 1289143803}
-  keyFragment3: {fileID: 1934520075}
-  candle: {fileID: 1247662225570832908}
 --- !u!1 &1311999125109769547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,8 +5270,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6944660842008263424}
+  - component: {fileID: 6944660842008263425}
   - component: {fileID: 6944660842008263426}
-  - component: {fileID: 6944660842008263427}
   m_Layer: 0
   m_Name: MeltedCandle1
   m_TagString: Untagged
@@ -6386,6 +6381,23 @@ Transform:
   - {fileID: 1514139575}
   m_Father: {fileID: 7751506943873590262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6944660842008263425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3637171081166515798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8621787fbddad4148901fa76deaf1123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candleScript: {fileID: 1514139571}
+  meltTime: 3
+  teleport: {fileID: 0}
+  keyFragment: {fileID: 401065707}
+  candle: {fileID: 3637171081166515798}
 --- !u!136 &6944660842008263426
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6409,25 +6421,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6944660842008263427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3637171081166515798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8621787fbddad4148901fa76deaf1123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  candleScript: {fileID: 1514139571}
-  meltTime: 3
-  teleport: {fileID: 0}
-  keyFragment1: {fileID: 401065707}
-  keyFragment2: {fileID: 1289143803}
-  keyFragment3: {fileID: 1934520075}
-  candle: {fileID: 3637171081166515798}
 --- !u!33 &6953175013859993383
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7201,9 +7194,7 @@ MonoBehaviour:
   candleScript: {fileID: 200489781}
   meltTime: 3
   teleport: {fileID: 0}
-  keyFragment1: {fileID: 401065707}
-  keyFragment2: {fileID: 1289143803}
-  keyFragment3: {fileID: 1934520075}
+  keyFragment: {fileID: 1934520075}
   candle: {fileID: 8555920653080235511}
 --- !u!136 &8923300186461745330
 CapsuleCollider:

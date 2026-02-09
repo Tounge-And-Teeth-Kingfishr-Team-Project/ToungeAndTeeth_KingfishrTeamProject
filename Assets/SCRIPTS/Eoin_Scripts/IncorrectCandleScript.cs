@@ -1,7 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
-using System.Collections;
-using System.Collections.Generic;
 
 public class IncorrectCandleScript : MonoBehaviour
 {
@@ -11,8 +8,7 @@ public class IncorrectCandleScript : MonoBehaviour
     public bool isLit;
     public bool correct;
     public bool incorrect;
-    public float incorrectTime;
-
+    
     void Start()
     {
         //resets the candle at the start
@@ -27,7 +23,9 @@ public class IncorrectCandleScript : MonoBehaviour
         //puts out the candle if incorrect
         if (incorrect == true)
         {
-            StartCoroutine(DelayAction());
+            isLit = false;
+            GetComponent<Renderer>().material.color = unlitColour;
+            incorrect = false;
         }
 
 
@@ -44,13 +42,6 @@ public class IncorrectCandleScript : MonoBehaviour
             candleManager.litCount++;
         }
 
-    }
 
-    public IEnumerator DelayAction()
-    {
-        yield return new WaitForSeconds(incorrectTime);
-        isLit = false;
-        GetComponent<Renderer>().material.color = unlitColour;
-        incorrect = false;
     }
 }
