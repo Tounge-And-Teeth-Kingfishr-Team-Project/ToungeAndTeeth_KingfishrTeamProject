@@ -1,6 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements.Experimental;
+using System.Collections;
+using System.Collections.Generic;
 
 public class CandleScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CandleScript : MonoBehaviour
     public bool isLit;
     public bool correct;
     public bool incorrect;
+    public float incorrectTime;
     public CandleManager candleManager;
 
     public float durationTime;
@@ -40,9 +42,8 @@ public class CandleScript : MonoBehaviour
         //puts out the candle if incorrect
         if (incorrect == true)
         {
-            isLit = false;
-            GetComponent<Renderer>().material.color = unlitColour;
-            incorrect = false;
+            StartCoroutine(DelayAction());
+            
         }
 
 
@@ -64,9 +65,17 @@ public class CandleScript : MonoBehaviour
         
     }
 
-    //private void flameSpawn()
-    //{
-    //    GameObject fireBall;
-    //    fireBall = Instantiate(candleFlame, fireballSpawnPoint.position, Quaternion.identity);
-    //}
-}
+    public IEnumerator DelayAction()
+    {
+        yield return new WaitForSeconds(incorrectTime);
+        isLit = false;
+        GetComponent<Renderer>().material.color = unlitColour;
+        incorrect = false;
+    }
+
+        //private void flameSpawn()
+        //{
+        //    GameObject fireBall;
+        //    fireBall = Instantiate(candleFlame, fireballSpawnPoint.position, Quaternion.identity);
+        //}
+    }
