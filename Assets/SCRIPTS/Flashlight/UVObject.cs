@@ -1,22 +1,44 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UVObject : MonoBehaviour
 {
-    private Renderer rend;
+    public static List<UVObject> AllUVObjects = new List<UVObject>();
+
+    private Renderer[] renderers;
 
     void Awake()
     {
-        rend = GetComponent<Renderer>();
+        // Grab ALL renderers on this object and its children
+        renderers = GetComponentsInChildren<Renderer>(true);
+
         Hide();
+    }
+
+    void OnEnable()
+    {
+        if (!AllUVObjects.Contains(this))
+            AllUVObjects.Add(this);
+    }
+
+    void OnDisable()
+    {
+        AllUVObjects.Remove(this);
     }
 
     public void Show()
     {
-        rend.enabled = true;
+        foreach (Renderer r in renderers)
+        {
+            r.enabled = true;
+        }
     }
 
     public void Hide()
     {
-        rend.enabled = false;
+        foreach (Renderer r in renderers)
+        {
+            r.enabled = false;
+        }
     }
 }
