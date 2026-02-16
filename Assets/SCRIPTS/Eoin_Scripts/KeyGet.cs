@@ -4,6 +4,9 @@ public class KeyGet : MonoBehaviour
 {
     
     public KeyManager keyManager;
+
+    public GameObject yellowKeyUI; // Assign the UI element in the Inspector
+
     void Start()
     {
         
@@ -20,6 +23,13 @@ public class KeyGet : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && keyManager.yellowKey != true)
         {
             keyManager.yellowKey = true;
+
+            // Show the UI element
+            if (yellowKeyUI != null)
+            {
+                yellowKeyUI.SetActive(true);
+            }
+
             Destroy(gameObject);
         }
     }
