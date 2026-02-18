@@ -1,45 +1,75 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DoorScript : MonoBehaviour
 {
     public bool doorOpen;
-    public KeyManager keyManager;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    // Reference to the key manager
+    public KeyManager keyManager;
+
+    // UI icon to hide when the key is used
+    public GameObject yellowKeyIcon;
+
+    // Tracks if the player is near the door
+    private bool playerInRange = false;
+
     void Update()
     {
-        if (doorOpen == true)
+        // Only open door if player is in range, door not already open, and presses E
+        if (playerInRange && !doorOpen && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            
+            TryOpenDoor();
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void TryOpenDoor()
     {
-        if (collision.gameObject.CompareTag("Player") && keyManager.yellowKey == true)
+        // Yellow key
+        if (keyManager.yellowKey)
         {
             doorOpen = true;
-            keyManager.yellowKey = false;
-            transform.Rotate(0, -90, 0);
-            
+            keyManager.yellowKey = false; // Consume the key
+            transform.Rotate(0, -90, 0);  // Open the door
+
+            // Hide the UI icon
+            if (yellowKeyIcon != null)
+            {
+                yellowKeyIcon.SetActive(false);
+            }
         }
 
-        if (collision.gameObject.CompareTag("Player") && keyManager.blueKey == true)
+        // Blue key
+        else if (keyManager.blueKey)
         {
             doorOpen = true;
             keyManager.blueKey = false;
             transform.Rotate(0, -90, 0);
         }
 
-        if (collision.gameObject.CompareTag("Player") && keyManager.pinkKey == true)
+        // Pink key
+        else if (keyManager.pinkKey)
         {
             doorOpen = true;
             keyManager.pinkKey = false;
             transform.Rotate(0, -90, 0);
+        }
+    }
+
+    // Trigger to detect player proximity
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 }

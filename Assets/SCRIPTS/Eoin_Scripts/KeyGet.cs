@@ -2,35 +2,64 @@ using UnityEngine;
 
 public class KeyGet : MonoBehaviour
 {
-    
+    // Reference to the KeyManager that tracks which keys the player has
     public KeyManager keyManager;
 
-    public GameObject yellowKeyUI; // Assign the UI element in the Inspector
+    // UI element that shows when the key is picked up (e.g., an icon)
+    public GameObject yellowKeyUI;
 
-    void Start()
-    {
-        
-    }
+    // Enum to define the type of key this object gives
+    public enum KeyType { Yellow, Pink, Blue, Shovel }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Select the key type for this object in the Inspector
+    public KeyType keyType = KeyType.Yellow;
 
-    private void OnTriggerEnter(Collider other)
+    // -----------------------------------------------------------------
+    // This function will be called by the Interactable script
+    // when the player presses E while in range
+    // -----------------------------------------------------------------
+    public void CollectKey()
     {
-        if(other.gameObject.CompareTag("Player") && keyManager.yellowKey != true)
+        // Determine which key this object gives
+        switch (keyType)
         {
-            keyManager.yellowKey = true;
+            case KeyType.Yellow:
+                // Only give the key if the player doesn't already have it
+                if (!keyManager.yellowKey)
+                {
+                    keyManager.yellowKey = true;
 
-            // Show the UI element
-            if (yellowKeyUI != null)
-            {
-                yellowKeyUI.SetActive(true);
-            }
+                    // Show the UI icon if assigned
+                    if (yellowKeyUI != null)
+                    {
+                        yellowKeyUI.SetActive(true);
+                    }
+                }
+                break;
 
-            Destroy(gameObject);
+            case KeyType.Pink:
+                if (!keyManager.pinkKey)
+                {
+                    keyManager.pinkKey = true;
+                }
+                break;
+
+            case KeyType.Blue:
+                if (!keyManager.blueKey)
+                {
+                    keyManager.blueKey = true;
+                }
+                break;
+
+            case KeyType.Shovel:
+                if (!keyManager.shovel)
+                {
+                    keyManager.shovel = true;
+                }
+                break;
         }
+
+        // Remove the key object from the scene after the player collects it
+        Destroy(gameObject);
     }
 }
