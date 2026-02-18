@@ -11,6 +11,9 @@ public class KeyFragmantSpawn : MonoBehaviour
     public GameObject keyFragment2;
     public GameObject keyFragment3;
     public GameObject candle;
+    public GameObject cande1;
+    public GameObject cande2;
+    public GameObject cande3;
     void Start()
     {
         keyFragment1.SetActive(!keyFragment1.activeSelf);
@@ -24,7 +27,6 @@ public class KeyFragmantSpawn : MonoBehaviour
         if (candleScript.correct == true)
         {
             StartCoroutine(DelayAction());
-            
         }
         
     }
@@ -33,17 +35,19 @@ public class KeyFragmantSpawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("KeyFragment"))
         {
-            candle.SetActive(!candle.activeSelf);
+            //candle.SetActive(!candle.activeSelf);
         }
     }
 
     public IEnumerator DelayAction()
     {
-        
+
         yield return new WaitForSeconds(meltTime);
         keyFragment1.SetActive(!keyFragment1.activeSelf);
         keyFragment2.SetActive(!keyFragment2.activeSelf);
         keyFragment3.SetActive(!keyFragment3.activeSelf);
-        Destroy(gameObject);
+        keyFragment1.SetActive(!cande1.activeSelf);
+        keyFragment2.SetActive(!cande2.activeSelf);
+        keyFragment3.SetActive(!cande3.activeSelf);
     }
 }

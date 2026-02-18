@@ -15,7 +15,7 @@ public class CandleScript : MonoBehaviour
 
     public float durationTime;
     public bool cooldown;
-    public float cooldownTime;
+    //public float cooldownTime;
 
     //public GameObject candleFlame;
     //public GameObject candleFlameCorrect;

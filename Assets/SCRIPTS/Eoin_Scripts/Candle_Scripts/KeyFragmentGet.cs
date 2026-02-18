@@ -6,9 +6,8 @@ using System.Collections.Generic;
 public class KeyFragmentGet : MonoBehaviour
 {
     public KeyManager keyManager;
-    public float fragmnetCount;
     public Transform fragmnetSpawnPoint;
-    public CandleScript candleScript;
+    public NewKeyFragomentSpawner theFragomentSpawner;
     public float spawnTime;
     public bool isSpawned;
     
@@ -20,7 +19,7 @@ public class KeyFragmentGet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (candleScript.correct == true && candleScript.incorrect != true)
+        if (theFragomentSpawner.fragmentMove == true && theFragomentSpawner.fragmentMove != false)
         {
             StartCoroutine(DelayAction());
             
@@ -29,9 +28,9 @@ public class KeyFragmentGet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && isSpawned == true)
+        if (other.gameObject.CompareTag("Player"))
         {
-            fragmnetCount ++;
+            keyManager.fragmnetCount ++;
             Destroy(gameObject);
         }
 
@@ -39,10 +38,7 @@ public class KeyFragmentGet : MonoBehaviour
 
     public IEnumerator DelayAction()
     {
-        candleScript.correct = false;
         yield return new WaitForSeconds(spawnTime);
-        isSpawned = true;
-        
-        
+        transform.position = fragmnetSpawnPoint.position;
     }
 }
