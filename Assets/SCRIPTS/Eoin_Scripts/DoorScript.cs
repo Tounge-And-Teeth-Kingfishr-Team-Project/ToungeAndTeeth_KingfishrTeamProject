@@ -33,13 +33,14 @@ public class DoorScript : MonoBehaviour
             doorOpen = true;
             keyManager.blueKey = false;
             transform.Rotate(0, -90, 0);
+            keyManager.fragmnetCount = 0;
         }
 
         if (collision.gameObject.CompareTag("Player") && keyManager.pinkKey == true)
         {
             doorOpen = true;
             keyManager.pinkKey = false;
-            transform.Rotate(0, -90, 0);
+            transform.Rotate(0, 90, 0);
         }
     }
 }
