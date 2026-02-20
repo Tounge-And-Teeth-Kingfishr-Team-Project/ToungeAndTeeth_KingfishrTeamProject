@@ -18,6 +18,7 @@ public class Rubble_Script : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && keyManager.shovel == true)
         {
+            keyManager.shovel = false;
             Destroy(gameObject);
         }
     }

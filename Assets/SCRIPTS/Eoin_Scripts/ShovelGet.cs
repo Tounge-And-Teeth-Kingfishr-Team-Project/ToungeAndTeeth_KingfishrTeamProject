@@ -16,7 +16,7 @@ public class ShovelGet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && keyManager.shovel != true)
         {
             keyManager.shovel = true;
             Destroy(gameObject);
