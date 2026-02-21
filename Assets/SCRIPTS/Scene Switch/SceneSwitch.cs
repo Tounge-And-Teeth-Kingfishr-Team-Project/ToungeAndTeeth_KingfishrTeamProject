@@ -1,11 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwitch : MonoBehaviour
+public class SceneSwitchInteract : Interactable
 {
+    [Header("Scene Settings")]
+    public int sceneIndex = 0; // Scene to load
 
-    void OnTriggerEnter(Collider other)
+    protected override void Interact(GameObject player)
     {
-        SceneManager.LoadScene(0);
+        // Load the specified scene
+        SceneManager.LoadScene(sceneIndex);
+
+        // Hide the UI prompt (optional)
+        if (uiPrompt != null)
+            uiPrompt.SetActive(false);
+
+        base.Interact(player);
     }
 }
