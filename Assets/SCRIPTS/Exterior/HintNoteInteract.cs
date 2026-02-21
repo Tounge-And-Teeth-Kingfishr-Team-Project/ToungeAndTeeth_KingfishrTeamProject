@@ -23,7 +23,7 @@ public class HintNoteInteract : Interactable
             if (!playerInRange)
             {
                 playerInRange = true;
-                ShowPrompt(true); // Show the "Press E" UI
+                ShowPrompt(true); // inherited from Interactable
             }
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -36,7 +36,7 @@ public class HintNoteInteract : Interactable
             if (playerInRange)
             {
                 playerInRange = false;
-                ShowPrompt(false); // Hide the "Press E" UI
+                ShowPrompt(false); // inherited from Interactable
             }
         }
 
@@ -63,14 +63,6 @@ public class HintNoteInteract : Interactable
         }
 
         base.Interact(player); // Optional: logs/debug
-    }
-
-    private void ShowPrompt(bool show)
-    {
-        if (uiPrompt != null)
-        {
-            uiPrompt.SetActive(show);
-        }
     }
 
     private void OnDrawGizmosSelected()

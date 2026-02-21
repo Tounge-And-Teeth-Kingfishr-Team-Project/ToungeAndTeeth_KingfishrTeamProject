@@ -49,13 +49,12 @@ public class Interactable : MonoBehaviour
         ShowPrompt(false);
     }
 
-    private void ShowPrompt(bool show)
+    public void ShowPrompt(bool show)
     {
         if (uiPrompt != null)
             uiPrompt.SetActive(show);
     }
 
-    // Optional: visualize the radius in editor
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
