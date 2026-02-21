@@ -6,41 +6,44 @@ public class DoorScript : MonoBehaviour
     public KeyManager keyManager;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (doorOpen == true)
-        {
-            
-        }
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") && keyManager.yellowKey == true)
+        if (other.CompareTag("Player") && keyManager.yellowKey)
         {
-            doorOpen = true;
+            OpenDoor(-90);
             keyManager.yellowKey = false;
-            transform.Rotate(0, -90, 0);
-            
         }
 
-        if (collision.gameObject.CompareTag("Player") && keyManager.blueKey == true)
+        if (other.CompareTag("Player") && keyManager.blueKey)
         {
-            doorOpen = true;
+            OpenDoor(-90);
             keyManager.blueKey = false;
-            transform.Rotate(0, -90, 0);
             keyManager.fragmnetCount = 0;
         }
 
-        if (collision.gameObject.CompareTag("Player") && keyManager.pinkKey == true)
+        if (other.CompareTag("Player") && keyManager.pinkKey)
+        {
+            OpenDoor(90);
+            keyManager.pinkKey = false;
+        }
+    }
+
+    void OpenDoor(float rotation)
+    {
+        if (!doorOpen)
         {
             doorOpen = true;
-            keyManager.pinkKey = false;
-            transform.Rotate(0, 90, 0);
+            transform.Rotate(0, rotation, 0);
         }
     }
 }
+

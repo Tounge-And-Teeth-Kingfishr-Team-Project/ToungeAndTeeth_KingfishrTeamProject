@@ -9,18 +9,19 @@ public class KeyGet : MonoBehaviour
 
     void Start()
     {
-        
+        if (keyManager == null)
+            keyManager = keyManager = FindFirstObjectByType<KeyManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player") && keyManager.yellowKey != true)
+        if (other.gameObject.CompareTag("Player") && keyManager.yellowKey != true)
         {
             keyManager.yellowKey = true;
 
