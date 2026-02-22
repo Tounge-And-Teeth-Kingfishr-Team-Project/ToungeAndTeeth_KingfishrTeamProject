@@ -13,8 +13,10 @@ public class IncorrectCandleScript : Interactable
         GetComponent<Renderer>().material.color = unlitColour;
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (incorrect)
         {
             isLit = false;

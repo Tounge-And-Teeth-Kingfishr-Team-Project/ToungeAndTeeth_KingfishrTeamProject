@@ -33,39 +33,16 @@ public class CandleScript : Interactable
             Debug.LogError("Player not found! Make sure the tag is set.");
     }
 
-    void Update()
+    protected override void Interact(GameObject player)
     {
-        if (player == null) return;
-
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-
-        // Show UI prompt if in range and candle is not lit
-        if (distance <= interactRadius && !isLit)
+        if (!isLit)
         {
-            if (uiPrompt != null)
-            {
-                uiPrompt.SetActive(true);
-                Text promptText = uiPrompt.GetComponent<Text>();
-                if (promptText != null)
-                    promptText.text = "Press E to light candle";
-            }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                LightCandle();
-            }
-        }
-        else
-        {
-            if (uiPrompt != null)
-                uiPrompt.SetActive(false);
+            isLit = true;
+            GetComponent<Renderer>().material.color = litColor;
+            Debug.Log("Candle lit!");
         }
 
-        // Update color if candle is correct
-        if (correct)
-        {
-            GetComponent<Renderer>().material.color = correctColor;
-        }
+        ShowPrompt(false);
     }
 
     private void LightCandle()

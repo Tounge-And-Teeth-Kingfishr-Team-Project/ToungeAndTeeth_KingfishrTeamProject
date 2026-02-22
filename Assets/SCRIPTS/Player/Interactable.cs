@@ -10,9 +10,8 @@ public class Interactable : MonoBehaviour
     public bool playerInRange = false;
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        // Check distance to player
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
@@ -25,7 +24,6 @@ public class Interactable : MonoBehaviour
                     ShowPrompt(true);
                 }
 
-                // Press E to interact
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Interact(player);

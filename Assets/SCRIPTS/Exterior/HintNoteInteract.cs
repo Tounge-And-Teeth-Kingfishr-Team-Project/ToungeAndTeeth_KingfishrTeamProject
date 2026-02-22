@@ -8,8 +8,9 @@ public class HintNoteInteract : Interactable
 
     private bool isUIOpen = false;
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         GameObject player = GameObject.FindWithTag("Player");
         if (player == null) return;
 

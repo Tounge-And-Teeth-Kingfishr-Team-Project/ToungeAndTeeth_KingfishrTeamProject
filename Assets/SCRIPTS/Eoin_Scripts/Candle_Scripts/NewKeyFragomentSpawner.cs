@@ -4,21 +4,21 @@ using System.Collections;
 public class NewKeyFragomentSpawner : MonoBehaviour
 {
     public GameObject keyFragment;
-    public CandleScript candleScript;
+    public CandleManager candleManager;
 
-    [Header("Fragment Movement")]
-    public bool fragmentMove = false;   // 🔥 Add this
     public float meltTime = 2f;
 
-    void Start()
-    {
-        fragmentMove = false;
-    }
+    private bool hasTriggered = false;
 
     void Update()
     {
-        if (candleScript != null && candleScript.correct)
+        if (candleManager == null) return;
+
+        Debug.Log("All correct lit? " + candleManager.AreAllCorrectCandlesLit());
+
+        if (!hasTriggered && candleManager.AreAllCorrectCandlesLit())
         {
+            hasTriggered = true;
             StartCoroutine(DelayAction());
         }
     }
@@ -26,7 +26,21 @@ public class NewKeyFragomentSpawner : MonoBehaviour
     private IEnumerator DelayAction()
     {
         yield return new WaitForSeconds(meltTime);
-        fragmentMove = true;
-        Destroy(gameObject); // optional: destroy the spawner
+
+        Instantiate(keyFragment, transform.position, Quaternion.identity);
+
+        // 🔥 destroy the candle that triggered this
+        if (candleManager != null)
+        {
+            foreach (CandleScript candle in candleManager.candles)
+            {
+                if (candle.correct && candle.isLit)
+                {
+                    Destroy(candle.gameObject);
+                }
+            }
+        }
+
+        Destroy(gameObject);
     }
 }

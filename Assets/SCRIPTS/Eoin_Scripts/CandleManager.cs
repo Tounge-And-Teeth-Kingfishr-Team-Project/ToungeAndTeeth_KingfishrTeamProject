@@ -57,16 +57,23 @@ public class CandleManager : MonoBehaviour
         Debug.Log($"Lit: {litCount}, Correct: {correctCount}, Incorrect: {incorrectCount}");
     }
 
-    // Optional helper: check if all correct candles are lit
     public bool AreAllCorrectCandlesLit()
     {
         if (!allCorrectRequired) return true;
 
+        bool hasCorrectCandle = false;
+
         foreach (CandleScript candle in candles)
         {
-            if (candle.correct && !candle.isLit)
-                return false;
+            if (candle.correct)
+            {
+                hasCorrectCandle = true;
+
+                if (!candle.isLit)
+                    return false;
+            }
         }
-        return true;
+
+        return hasCorrectCandle; // only true if at least one correct exists
     }
 }
