@@ -1,26 +1,29 @@
 using UnityEngine;
 
-public class PinkKeyGet : MonoBehaviour
+public class PinkKeyGet : Interactable
 {
-    
     public KeyManager keyManager;
+
     void Start()
     {
-        
+        // Auto-find KeyManager if not assigned
+        if (keyManager == null)
+            keyManager = FindFirstObjectByType<KeyManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Interact(GameObject player)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Player") && keyManager.pinkKey != true)
+        if (keyManager != null && !keyManager.pinkKey)
         {
             keyManager.pinkKey = true;
+
+            Debug.Log("Pink Key picked up!");
+
+            // Destroy the key object
             Destroy(gameObject);
         }
+
+        // Hide the UI prompt
+        ShowPrompt(false);
     }
 }

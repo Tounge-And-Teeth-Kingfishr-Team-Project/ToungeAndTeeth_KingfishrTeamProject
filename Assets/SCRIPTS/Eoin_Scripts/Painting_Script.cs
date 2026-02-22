@@ -1,41 +1,36 @@
 using UnityEngine;
 
-public class Painting_Script : MonoBehaviour
+public class Painting_Script : Interactable
 {
     public Rigidbody rb;
     public GameObject yellowKey;   // Assign in inspector
-    public GameObject SmileyFace;  // Assign the GameObject you want to hide when painting falls
+    public GameObject SmileyFace;  // Object to hide when painting "falls"
 
     void Start()
     {
-        rb.isKinematic = true;
-        yellowKey.SetActive(false);  // Hide at start
+        rb.isKinematic = true;           // Painting starts static
+        if (yellowKey != null)
+            yellowKey.SetActive(false); // Hide key at start
     }
 
-    // Update is called once per frame
-    void Update()
+    // This replaces collision detection with E-to-interact
+    protected override void Interact(GameObject player)
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
+        // Let the painting "fall"
+        if (rb != null)
             rb.isKinematic = false;
 
-            // Show the key when painting falls
-            if (yellowKey != null)
-            {
-                yellowKey.SetActive(true);
-            }
+        // Reveal the key
+        if (yellowKey != null)
+            yellowKey.SetActive(true);
 
-            // Turn off the specified GameObject
-            if (SmileyFace != null)
-            {
-                SmileyFace.SetActive(false);
-            }
-        }
+        // Hide the specified object (like SmileyFace)
+        if (SmileyFace != null)
+            SmileyFace.SetActive(false);
+
+        // Hide the interaction prompt
+        ShowPrompt(false);
+
+        Debug.Log("Painting interacted, key revealed!");
     }
-
 }

@@ -63,7 +63,6 @@ public class DoorScript : Interactable
 
         if (!canOpen) return;
 
-        // 🔥 NEW TOGGLE LOGIC
         StopAllCoroutines();
         StartCoroutine(RotateDoor(doorOpen ? closedRotation : openRotation));
         doorOpen = !doorOpen;

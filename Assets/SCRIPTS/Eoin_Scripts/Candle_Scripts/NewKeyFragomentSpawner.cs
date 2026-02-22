@@ -29,7 +29,6 @@ public class NewKeyFragomentSpawner : MonoBehaviour
 
         Instantiate(keyFragment, transform.position, Quaternion.identity);
 
-        // 🔥 destroy the candle that triggered this
         if (candleManager != null)
         {
             foreach (CandleScript candle in candleManager.candles)
