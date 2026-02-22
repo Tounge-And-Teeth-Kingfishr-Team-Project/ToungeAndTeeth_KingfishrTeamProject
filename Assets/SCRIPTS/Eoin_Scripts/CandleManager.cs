@@ -1,45 +1,72 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CandleManager : MonoBehaviour
 {
-    public float correctCount;
-    public float incorrectCount;
-    public float litCount;
-    public CandleScript candleScript1;
-    public CandleScript candleScript2;
-    public CandleScript candleScript3;
-    public IncorrectCandleScript incorrectCandleScript1;
-    public IncorrectCandleScript incorrectCandleScript2;
-    public IncorrectCandleScript incorrectCandleScript3;
+    [Header("Candle Tracking")]
+    public List<CandleScript> candles = new List<CandleScript>();
+    public int litCount = 0;
+    public int correctCount = 0;
+    public int incorrectCount = 0;
+
+    [Header("Settings")]
+    public bool allCorrectRequired = true;
+
     void Start()
     {
-        //setting all the variables to default values
-        litCount = 0f;
-        correctCount = 0f;
-        incorrectCount = 0f;
+        // Initialize counts
+        litCount = 0;
+        correctCount = 0;
+        incorrectCount = 0;
+
+        if (candles.Count == 0)
+        {
+            // Use the new method instead of FindObjectsOfType
+            CandleScript[] foundCandles = Object.FindObjectsByType<CandleScript>(FindObjectsSortMode.None);
+            foreach (CandleScript candle in foundCandles)
+            {
+                candle.candleManager = this; // ensure manager reference is set
+                candles.Add(candle);
+            }
+        }
     }
-    //checks if three candles are lit
+
     void Update()
     {
-        //If all the correct candles are lit, set their correct booleans to true
-        if (litCount == 3f && correctCount == 3f)
-       {
-            candleScript1.correct = true;
-            candleScript2.correct = true;
-            candleScript3.correct = true;
-       }
-        //If three candles are lit but not all correct, it resets the puzzle
-        if (litCount == 3f && correctCount != 3f)
+        // Reset counts each frame (to account for dynamic lighting/unlighting)
+        litCount = 0;
+        correctCount = 0;
+        incorrectCount = 0;
+
+        foreach (CandleScript candle in candles)
         {
-            candleScript1.incorrect = true;
-            candleScript2.incorrect = true;
-            candleScript3.incorrect = true;
-            incorrectCandleScript1.incorrect = true;
-            incorrectCandleScript2.incorrect = true;
-            incorrectCandleScript3.incorrect = true;
-            litCount = 0f;
-            correctCount = 0f;
+            if (candle.isLit)
+            {
+                litCount++;
+
+                if (candle.correct)
+                    correctCount++;
+                else if (candle.incorrect)
+                    incorrectCount++;
+                else
+                    incorrectCount++; // default to incorrect if neither explicitly set
+            }
         }
 
+        // Debugging: display current counts
+        Debug.Log($"Lit: {litCount}, Correct: {correctCount}, Incorrect: {incorrectCount}");
+    }
+
+    // Optional helper: check if all correct candles are lit
+    public bool AreAllCorrectCandlesLit()
+    {
+        if (!allCorrectRequired) return true;
+
+        foreach (CandleScript candle in candles)
+        {
+            if (candle.correct && !candle.isLit)
+                return false;
+        }
+        return true;
     }
 }

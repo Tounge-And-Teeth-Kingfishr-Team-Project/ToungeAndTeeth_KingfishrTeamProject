@@ -1,32 +1,32 @@
-using UnityEngine;
-using UnityEngine.UIElements.Experimental;
+﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class NewKeyFragomentSpawner : MonoBehaviour
 {
     public GameObject keyFragment;
     public CandleScript candleScript;
-    public bool fragmentMove;
-    public float meltTime;
+
+    [Header("Fragment Movement")]
+    public bool fragmentMove = false;   // 🔥 Add this
+    public float meltTime = 2f;
+
     void Start()
     {
-        
+        fragmentMove = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (candleScript.correct == true)
+        if (candleScript != null && candleScript.correct)
         {
             StartCoroutine(DelayAction());
         }
     }
 
-    public IEnumerator DelayAction()
+    private IEnumerator DelayAction()
     {
         yield return new WaitForSeconds(meltTime);
         fragmentMove = true;
-        Destroy(gameObject);
+        Destroy(gameObject); // optional: destroy the spawner
     }
 }

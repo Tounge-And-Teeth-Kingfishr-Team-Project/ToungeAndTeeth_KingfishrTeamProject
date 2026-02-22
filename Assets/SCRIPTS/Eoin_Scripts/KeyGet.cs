@@ -1,37 +1,30 @@
 using UnityEngine;
 
-public class KeyGet : MonoBehaviour
+public class KeyGet : Interactable
 {
-    
     public KeyManager keyManager;
-
-    public GameObject yellowKeyUI; // Assign the UI element in the Inspector
+    public GameObject yellowKeyUI;
 
     void Start()
     {
         if (keyManager == null)
-            keyManager = keyManager = FindFirstObjectByType<KeyManager>();
+            keyManager = FindFirstObjectByType<KeyManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Interact(GameObject player)
     {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") && keyManager.yellowKey != true)
+        if (!keyManager.yellowKey)
         {
             keyManager.yellowKey = true;
 
-            // Show the UI element
             if (yellowKeyUI != null)
-            {
                 yellowKeyUI.SetActive(true);
-            }
+
+            Debug.Log("Yellow key picked up");
 
             Destroy(gameObject);
         }
+
+        ShowPrompt(false);
     }
 }

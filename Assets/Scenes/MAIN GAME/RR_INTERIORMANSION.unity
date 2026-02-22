@@ -430,7 +430,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1955832374}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -794,10 +794,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.01
-  m_Height: 0.5
+  m_Radius: 0.14533427
+  m_Height: 0.58808225
   m_Direction: 1
-  m_Center: {x: 0.00000023841858, y: 0, z: 0.00000023888424}
+  m_Center: {x: 0.038322873, y: -0.049468942, z: 0.00000023810635}
 --- !u!4 &160357631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 61683b5b2b6ed764883ea3f7f2409235, type: 3}
@@ -941,15 +941,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58f871da98e3c44498d63c629d33201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  litColour: {r: 1, g: 0.8885046, b: 0, a: 1}
-  unlitColour: {r: 0, g: 0, b: 0, a: 0}
-  correctColour: {r: 1, g: 0.9648181, b: 0.6761006, a: 1}
+  interactRadius: 2
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
+  litColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  unlitColor: {r: 0, g: 0, b: 0, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
   isLit: 0
   correct: 0
   incorrect: 0
   candleManager: {fileID: 7751506943873590263}
-  durationTime: 0
-  cooldown: 0
 --- !u!136 &200489782
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -984,7 +986,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6944660842008263424}
+    m_TransformParent: {fileID: 7751506943873590262}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalScale.x
@@ -1000,15 +1002,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0558
+      value: 0.3778
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.16600008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1016,7 +1018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1044,18 +1046,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_Name
-      value: Flame
+      value: Candle 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6944660842008263424}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1514139571}
+      addedObject: {fileID: 1514139572}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1514139572}
+      addedObject: {fileID: 1514139578}
   m_SourcePrefab: {fileID: 100100000, guid: 9d55b553e9155d44689e66f666251777, type: 3}
 --- !u!1 &241084058
 GameObject:
@@ -1180,13 +1185,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417f580f70f342041b0e4dbea1107ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRadius: 3
+  interactRadius: 2
   interactPrompt: Press E to interact
   uiPrompt: {fileID: 1438731748}
   playerInRange: 0
   playerFlashlightUV: {fileID: 1739182377}
   controlsUI: {fileID: 1061396999}
-  uiDisplayTime: 1
+  uiDisplayTime: 3
 --- !u!1001 &256072147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1375,15 +1380,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58f871da98e3c44498d63c629d33201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  litColour: {r: 1, g: 0.8885046, b: 0, a: 1}
-  unlitColour: {r: 0, g: 0, b: 0, a: 0}
-  correctColour: {r: 1, g: 0.9648181, b: 0.6761006, a: 1}
+  interactRadius: 2
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
+  litColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  unlitColor: {r: 0, g: 0, b: 0, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
   isLit: 0
   correct: 0
   incorrect: 0
   candleManager: {fileID: 7751506943873590263}
-  durationTime: 0
-  cooldown: 0
 --- !u!136 &301889044
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1403,10 +1410,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
-  m_Height: 5
+  m_Radius: 1.1103541
+  m_Height: 3.293124
   m_Direction: 1
-  m_Center: {x: -0.00000000372529, y: 0.018060481, z: 0.000000001862645}
+  m_Center: {x: 0, y: -0.020439308, z: -1.0103544}
 --- !u!4 &301889047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
@@ -1567,11 +1574,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220493aff76324747bc256189d4b1e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   candleManager: {fileID: 7751506943873590263}
   litColour: {r: 0.43617022, g: 1, b: 0, a: 1}
   unlitColour: {r: 0, g: 0, b: 0, a: 0}
   isLit: 0
-  correct: 0
   incorrect: 0
 --- !u!136 &388984776
 CapsuleCollider:
@@ -1868,7 +1878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2d748e15d524443a51972f30732f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyManager: {fileID: 0}
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
+  keyManager: {fileID: 1719559172}
   yellowKeyUI: {fileID: 1880904312}
 --- !u!1001 &411362430
 PrefabInstance:
@@ -2208,11 +2222,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220493aff76324747bc256189d4b1e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   candleManager: {fileID: 7751506943873590263}
   litColour: {r: 0.43617022, g: 1, b: 0, a: 1}
   unlitColour: {r: 0, g: 0, b: 0, a: 0}
   isLit: 0
-  correct: 0
   incorrect: 0
 --- !u!136 &446085496
 CapsuleCollider:
@@ -2283,10 +2300,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 0.07211389
   m_Height: 0.5
   m_Direction: 1
-  m_Center: {x: 0.00000023841858, y: 0.000000029802322, z: -0.000000059138983}
+  m_Center: {x: 0.026359035, y: 0.000000023841856, z: 0.03575504}
 --- !u!1 &486386133 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5970529542768326293, guid: 1b90ab02f3bc9dd4bb89232a7ce6ebdf, type: 3}
@@ -2304,11 +2321,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbff442bbb4e954e8b34a3dc9efb640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   keyManager: {fileID: 1719559172}
   fragmnetSpawnPoint: {fileID: 1187332797}
-  theFragomentSpawner: {fileID: 6944660842008263427}
+  theFragomentSpawner: {fileID: 0}
   spawnTime: 0
-  isSpawned: 0
 --- !u!65 &486386135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2523,6 +2543,10 @@ PrefabInstance:
     - target: {fileID: 1338957970469099642, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
       propertyPath: MoveSpeed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474944815263119058, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2773241576276783115, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3666,6 +3690,8 @@ Transform:
   - {fileID: 7591077311133347069}
   - {fileID: 653435912621695407}
   - {fileID: 4713545561687171624}
+  - {fileID: 5204767948574219107}
+  - {fileID: 8967397928221156016}
   m_Father: {fileID: 1425518701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &734572595
@@ -4685,7 +4711,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8923300186461745328}
+    m_TransformParent: {fileID: 7751506943873590262}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalScale.x
@@ -4701,15 +4727,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.029000092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.026
+      value: 0.257
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.048
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4745,11 +4771,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_Name
-      value: Flame
+      value: Candle 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8923300186461745328}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       insertIndex: -1
@@ -6202,11 +6231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbff442bbb4e954e8b34a3dc9efb640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   keyManager: {fileID: 1719559172}
   fragmnetSpawnPoint: {fileID: 264866176}
-  theFragomentSpawner: {fileID: 1247662225570832911}
+  theFragomentSpawner: {fileID: 0}
   spawnTime: 0
-  isSpawned: 0
 --- !u!1 &1289639372
 GameObject:
   m_ObjectHideFlags: 0
@@ -7045,7 +7077,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 582814750731277182}
+    m_TransformParent: {fileID: 7751506943873590262}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalScale.x
@@ -7061,15 +7093,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.724
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.043
+      value: 0.317
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.8910001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7105,11 +7137,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       propertyPath: m_Name
-      value: Flame
+      value: Candle 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 582814750731277182}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
       insertIndex: -1
@@ -7259,27 +7294,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d55b553e9155d44689e66f666251777, type: 3}
   m_PrefabInstance: {fileID: 216858864}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1514139571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514139570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58f871da98e3c44498d63c629d33201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  litColour: {r: 1, g: 0.8885046, b: 0, a: 1}
-  unlitColour: {r: 0, g: 0, b: 0, a: 0}
-  correctColour: {r: 1, g: 0.9648181, b: 0.6761006, a: 1}
-  isLit: 0
-  correct: 0
-  incorrect: 0
-  candleManager: {fileID: 7751506943873590263}
-  durationTime: 0
-  cooldown: 0
 --- !u!136 &1514139572
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7299,15 +7313,38 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.8684012
   m_Height: 5
   m_Direction: 1
-  m_Center: {x: -0.00000000372529, y: 0.018060481, z: 0.000000001862645}
+  m_Center: {x: -0.006521543, y: 0.018060526, z: 0.012877783}
 --- !u!4 &1514139575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d55b553e9155d44689e66f666251777, type: 3}
   m_PrefabInstance: {fileID: 216858864}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1514139578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514139570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58f871da98e3c44498d63c629d33201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRadius: 2
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
+  litColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  unlitColor: {r: 0, g: 0, b: 0, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  isLit: 0
+  correct: 0
+  incorrect: 0
+  candleManager: {fileID: 7751506943873590263}
 --- !u!1 &1517549482
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,11 +7573,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220493aff76324747bc256189d4b1e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   candleManager: {fileID: 7751506943873590263}
   litColour: {r: 0.43617022, g: 1, b: 0, a: 1}
   unlitColour: {r: 0, g: 0, b: 0, a: 0}
   isLit: 0
-  correct: 0
   incorrect: 0
 --- !u!136 &1591685957
 CapsuleCollider:
@@ -8100,9 +8140,9 @@ MonoBehaviour:
   pinkKey: 0
   blueKey: 0
   shovel: 0
-  yellowDoor: {fileID: 0}
-  pinkDoor: {fileID: 0}
-  blueDoor: {fileID: 0}
+  yellowDoor: {fileID: 7458471916143707917}
+  pinkDoor: {fileID: 1131575768}
+  blueDoor: {fileID: 7438582481948147222}
   keyFragmnetGet: {fileID: 0}
   fragmnetCount: 0
 --- !u!4 &1719559173
@@ -8901,11 +8941,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbff442bbb4e954e8b34a3dc9efb640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRadius: 3
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 1438731748}
+  playerInRange: 0
   keyManager: {fileID: 1719559172}
   fragmnetSpawnPoint: {fileID: 1322719431}
-  theFragomentSpawner: {fileID: 8923300186461745331}
+  theFragomentSpawner: {fileID: 0}
   spawnTime: 0
-  isSpawned: 0
 --- !u!54 &1934520084
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8970,6 +9013,11 @@ Transform:
   - {fileID: 567170163}
   m_Father: {fileID: 1280176215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1955832374 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6191945569505626557, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
+  m_PrefabInstance: {fileID: 537896082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1982296197
 GameObject:
   m_ObjectHideFlags: 0
@@ -39506,8 +39554,8 @@ Transform:
   m_GameObject: {fileID: 1247662225570832908}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.724, y: 0.274, z: 0.891}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.28666693, z: 0}
+  m_LocalScale: {x: 6.666667, y: 6.666667, z: 6.666667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6770067289393715854}
@@ -39519,9 +39567,8 @@ Transform:
   - {fileID: 9055715267645468428}
   - {fileID: 4409094821409159661}
   - {fileID: 5604444883508643423}
-  - {fileID: 301889047}
   - {fileID: 153392927}
-  m_Father: {fileID: 7751506943873590262}
+  m_Father: {fileID: 301889047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &583651791330013442
 MeshCollider:
@@ -73000,10 +73047,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.005
-  m_Height: 1
+  m_Radius: 0.25753796
+  m_Height: 0.7776053
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.0070968624, y: -0.1111978, z: -0.0070261476}
 --- !u!114 &1247662225570832911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73016,10 +73063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e170361b7f66724283830f7584c90f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyFragment: {fileID: 1289143803}
+  keyFragment: {fileID: 1934520075}
   candleScript: {fileID: 301889043}
   fragmentMove: 0
-  meltTime: 3
+  meltTime: 2
 --- !u!4 &1248292998283840999
 Transform:
   m_ObjectHideFlags: 0
@@ -126765,7 +126812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5204767948574219107}
   m_Layer: 0
-  m_Name: Wall_Big_Door (8)
+  m_Name: Bedroom Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233605,12 +233652,10 @@ Transform:
   - {fileID: 7400443621223375776}
   - {fileID: 6049987815718073656}
   - {fileID: 6727251979204374382}
-  - {fileID: 8967397928221156016}
   - {fileID: 5654636833508714179}
   - {fileID: 4946321498692679253}
   - {fileID: 4662239489235338314}
   - {fileID: 8995143817226687969}
-  - {fileID: 5204767948574219107}
   - {fileID: 2992828362058329943}
   - {fileID: 8072914162329777879}
   - {fileID: 612649254289844408}
@@ -243733,7 +243778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8967397928221156016}
   m_Layer: 0
-  m_Name: Wall_Big_Door (4)
+  m_Name: Bathroom Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273274,7 +273319,7 @@ Transform:
   m_GameObject: {fileID: 2328460733870624353}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.149, y: 0.4239999, z: 16.027}
+  m_LocalPosition: {x: 10.37152, y: 4.0319, z: 8.13825}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -273295,7 +273340,7 @@ Transform:
   - {fileID: 8342650842271709107}
   - {fileID: 2951015832599873605}
   - {fileID: 351322441974420226}
-  m_Father: {fileID: 4430218873529203645}
+  m_Father: {fileID: 721928780}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &5205209396722133077
 BoxCollider:
@@ -357960,9 +358005,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3637171081166515798}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0.322, z: 0.166}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3719997, z: 0}
+  m_LocalScale: {x: 6.666667, y: 6.666667, z: 6.666667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7383314430876868669}
@@ -357974,9 +358019,8 @@ Transform:
   - {fileID: 1486926223202744361}
   - {fileID: 140259462940006556}
   - {fileID: 809503956087869443}
-  - {fileID: 1514139575}
   - {fileID: 482134569}
-  m_Father: {fileID: 7751506943873590262}
+  m_Father: {fileID: 1514139575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &6944660842008263426
 CapsuleCollider:
@@ -357997,10 +358041,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.005
-  m_Height: 1
+  m_Radius: 0.07278522
+  m_Height: 0.58436793
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.03850551, y: -0.044265386, z: -0.002202642}
 --- !u!114 &6944660842008263427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358013,10 +358057,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e170361b7f66724283830f7584c90f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyFragment: {fileID: 0}
-  candleScript: {fileID: 1514139571}
+  keyFragment: {fileID: 1289143803}
+  candleScript: {fileID: 1514139578}
   fragmentMove: 0
-  meltTime: 3
+  meltTime: 2
 --- !u!1 &6944951370132788149
 GameObject:
   m_ObjectHideFlags: 0
@@ -381599,7 +381643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b96e69ac45669f45a28ec5a1670f571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRadius: 1.5
+  interactRadius: 2
   interactPrompt: Locked
   uiPrompt: {fileID: 349204731}
   playerInRange: 0
@@ -396777,9 +396821,9 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6944660842008263424}
-  - {fileID: 582814750731277182}
-  - {fileID: 8923300186461745328}
+  - {fileID: 1514139575}
+  - {fileID: 301889047}
+  - {fileID: 200489785}
   - {fileID: 6257349525885943219}
   - {fileID: 2503837114518529891}
   - {fileID: 6526792603588121948}
@@ -396797,15 +396841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e23c951d61c75459a663dc10a406f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctCount: 0
-  incorrectCount: 0
+  candles: []
   litCount: 0
-  candleScript1: {fileID: 1514139571}
-  candleScript2: {fileID: 301889043}
-  candleScript3: {fileID: 200489781}
-  incorrectCandleScript1: {fileID: 446085495}
-  incorrectCandleScript2: {fileID: 1591685956}
-  incorrectCandleScript3: {fileID: 388984775}
+  correctCount: 3
+  incorrectCount: 3
+  allCorrectRequired: 1
 --- !u!4 &7752106703044008908
 Transform:
   m_ObjectHideFlags: 0
@@ -455763,9 +455803,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8555920653080235511}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.029, y: 0.231, z: -1.048}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.17333317, z: 0}
+  m_LocalScale: {x: 6.666667, y: 6.666667, z: 6.666667}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4354152986778293908}
@@ -455777,9 +455817,8 @@ Transform:
   - {fileID: 193357729135303577}
   - {fileID: 8771749381483972125}
   - {fileID: 374785770899150668}
-  - {fileID: 200489785}
   - {fileID: 1226973448}
-  m_Father: {fileID: 7751506943873590262}
+  m_Father: {fileID: 200489785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &8923300186461745330
 CapsuleCollider:
@@ -455816,10 +455855,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e170361b7f66724283830f7584c90f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyFragment: {fileID: 1934520075}
+  keyFragment: {fileID: 486386133}
   candleScript: {fileID: 200489781}
   fragmentMove: 0
-  meltTime: 3
+  meltTime: 2
 --- !u!4 &8923687622860798610
 Transform:
   m_ObjectHideFlags: 0
@@ -458257,7 +458296,7 @@ Transform:
   m_GameObject: {fileID: 4628116809540431699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.1, y: 0.4239999, z: 23.98}
+  m_LocalPosition: {x: 15.32252, y: 4.0319, z: 16.09125}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -458278,7 +458317,7 @@ Transform:
   - {fileID: 4697482427756725266}
   - {fileID: 647165284777647944}
   - {fileID: 3093658008070060438}
-  m_Father: {fileID: 4430218873529203645}
+  m_Father: {fileID: 721928780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &8967707275965994103
 MeshCollider:
@@ -464099,7 +464138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc6034cf86970448902f29254727d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRadius: 2
+  interactRadius: 1.5
   interactPrompt: Press E to interact
   uiPrompt: {fileID: 1507100105}
   playerInRange: 0

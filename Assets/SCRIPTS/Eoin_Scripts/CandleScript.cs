@@ -1,72 +1,92 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements.Experimental;
+using UnityEngine.UI;
 
-public class CandleScript : MonoBehaviour
+public class CandleScript : Interactable
 {
-    //public CandleManager candleManager;
-    public Color litColour;
-    public Color unlitColour;
-    public Color correctColour;
-    public bool isLit;
-    public bool correct;
-    public bool incorrect;
+    [Header("Candle Colors")]
+    public Color litColor = Color.yellow;
+    public Color unlitColor = Color.black;
+    public Color correctColor = Color.green;
+
+    [Header("Candle State")]
+    public bool isLit = false;
+    public bool correct = false;
+    public bool incorrect = false; // Added to fix CandleManager errors
+
+    [Header("Candle Manager")]
     public CandleManager candleManager;
 
-    public float durationTime;
-    public bool cooldown;
-    //public float cooldownTime;
+    private GameObject player;
 
-    //public GameObject candleFlame;
-    //public GameObject candleFlameCorrect;
-    //public Transform fireballSpawnPoint;
     void Start()
     {
-        //resets the candle at the start
+        // Set initial color
+        GetComponent<Renderer>().material.color = unlitColor;
 
-        GetComponent<Renderer>().material.color = unlitColour;
-        correct = false;
-        incorrect = false;
+        // Hide UI prompt at start
+        if (uiPrompt != null)
+            uiPrompt.SetActive(false);
+
+        // Find player
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+            Debug.LogError("Player not found! Make sure the tag is set.");
     }
 
-    
     void Update()
     {
-        //changes colour to the solved colour
-        if (correct == true)
+        if (player == null) return;
+
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+
+        // Show UI prompt if in range and candle is not lit
+        if (distance <= interactRadius && !isLit)
         {
-            GetComponent<Renderer>().material.color = correctColour;
+            if (uiPrompt != null)
+            {
+                uiPrompt.SetActive(true);
+                Text promptText = uiPrompt.GetComponent<Text>();
+                if (promptText != null)
+                    promptText.text = "Press E to light candle";
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                LightCandle();
+            }
         }
-        //puts out the candle if incorrect
-        if (incorrect == true)
+        else
         {
-            isLit = false;
-            GetComponent<Renderer>().material.color = unlitColour;
-            incorrect = false;
+            if (uiPrompt != null)
+                uiPrompt.SetActive(false);
         }
 
-
+        // Update color if candle is correct
+        if (correct)
+        {
+            GetComponent<Renderer>().material.color = correctColor;
+        }
     }
 
-    private void OnTriggerEnter(Collider other) 
+    private void LightCandle()
     {
-        //lights the candle when the player touches the candle
-        if (other.gameObject.CompareTag("Player") && isLit != true)
+        if (!isLit)
         {
-            //flameSpawn();
-            Debug.Log("Player touched candle");
             isLit = true;
-            GetComponent<Renderer>().material.color = litColour;
-            //increases the lit count and correct count in the candle manager
-            candleManager.litCount++;
-            candleManager.correctCount++;
-        }
-        
-    }
+            GetComponent<Renderer>().material.color = litColor;
 
-    //private void flameSpawn()
-    //{
-    //    GameObject fireBall;
-    //    fireBall = Instantiate(candleFlame, fireballSpawnPoint.position, Quaternion.identity);
-    //}
+            // Update manager counts
+            if (candleManager != null)
+            {
+                candleManager.litCount++;
+                if (correct) candleManager.correctCount++;
+                if (incorrect) candleManager.incorrectCount++; // if you track incorrect separately
+            }
+
+            Debug.Log("Candle lit with E!");
+        }
+
+        if (uiPrompt != null)
+            uiPrompt.SetActive(false);
+    }
 }

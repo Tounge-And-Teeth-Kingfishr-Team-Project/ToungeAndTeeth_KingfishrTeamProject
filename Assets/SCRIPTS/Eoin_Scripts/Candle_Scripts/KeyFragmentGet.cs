@@ -1,44 +1,37 @@
-using UnityEngine;
-using UnityEngine.UIElements.Experimental;
+﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public class KeyFragmentGet : MonoBehaviour
+public class KeyFragmentGet : Interactable
 {
     public KeyManager keyManager;
     public Transform fragmnetSpawnPoint;
     public NewKeyFragomentSpawner theFragomentSpawner;
     public float spawnTime;
-    public bool isSpawned;
-    
-    void Start()
+
+    private bool isSpawned = false; // 🔥 Add this
+
+    protected override void Interact(GameObject player)
     {
-        
+        keyManager.fragmnetCount++;
+        Debug.Log("Fragment collected");
+
+        Destroy(gameObject);
+        ShowPrompt(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (theFragomentSpawner.fragmentMove == true && theFragomentSpawner.fragmentMove != false)
+        if (theFragomentSpawner != null && theFragomentSpawner.fragmentMove && !isSpawned)
         {
+            isSpawned = true;
             StartCoroutine(DelayAction());
-            
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            keyManager.fragmnetCount ++;
-            Destroy(gameObject);
-        }
-
-    }
-
-    public IEnumerator DelayAction()
+    private IEnumerator DelayAction()
     {
         yield return new WaitForSeconds(spawnTime);
         transform.position = fragmnetSpawnPoint.position;
+        isSpawned = false; // allow next spawn if needed
     }
 }

@@ -42,6 +42,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+
     protected virtual void Interact(GameObject player)
     {
         // This will be overridden by child classes
