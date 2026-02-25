@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6795510009007760845}
   - component: {fileID: 8525378471834429782}
   - component: {fileID: 2925358969667736977}
+  - component: {fileID: 7575827273242352548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 5
-  MoveSpeed: 10
+  MoveSpeed: 2.5
   jumpForce: 10
   fallMultiplier: 2.5
   ascendMultiplier: 2
@@ -277,6 +278,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7575827273242352548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942492663349684662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f938acf332ac94bb7adc7bd124dccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vel: 0
+  idle: {fileID: 9108762854169156119}
+  walk: {fileID: 842610654297096209}
+  run: {fileID: 1555152377018647549}
 --- !u!1 &2481038484172876988
 GameObject:
   m_ObjectHideFlags: 0
