@@ -17,13 +17,15 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 10f;
     public float fallMultiplier = 2.5f; // Multiplies gravity when falling down
     public float ascendMultiplier = 2f; // Multiplies gravity for ascending to peak of jump
-    private bool isGrounded = true;
+    private bool isGrounded = false;
     public LayerMask groundLayer;
     private float groundCheckTimer = 0f;
     private float groundCheckDelay = 0.3f;
     private float playerHeight;
     private float raycastDistance;
 
+    //Animations
+    private AnimationSwitcher animationSwitcher;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         // Hides the mouse
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        animationSwitcher = GetComponent<AnimationSwitcher>();
     }
 
     void Update()
@@ -72,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-
+        animationSwitcher.ChangeAnimation();
         Vector3 movement = (transform.right * moveHorizontal + transform.forward * moveForward).normalized;
         Vector3 targetVelocity = movement * MoveSpeed;
 
