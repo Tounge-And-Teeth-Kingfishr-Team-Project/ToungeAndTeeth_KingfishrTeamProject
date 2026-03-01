@@ -1,12 +1,10 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class BathroomDoorInteractable : Interactable
+public class FrontDoor_SceneSwitch : Interactable
 {
     [Header("Scene Settings")]
-    public int sceneIndex = 2; // Scene to load
+    public int sceneIndex = 4; // Scene to load
 
     [Header("Player")]
     public PlayerMovement playerController; // Player movement script
