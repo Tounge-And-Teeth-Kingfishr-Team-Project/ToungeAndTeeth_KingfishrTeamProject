@@ -5,6 +5,7 @@ public class CandleManager : MonoBehaviour
 {
     [Header("Candle Tracking")]
     public List<CandleScript> candles = new List<CandleScript>();
+    public List<IncorrectCandleScript> incorrectCandles = new List<IncorrectCandleScript>();
     public int litCount = 0;
     public int correctCount = 0;
     public int incorrectCount = 0;
@@ -38,6 +39,8 @@ public class CandleManager : MonoBehaviour
         correctCount = 0;
         incorrectCount = 0;
 
+        
+
         foreach (CandleScript candle in candles)
         {
             if (candle.isLit)
@@ -52,6 +55,8 @@ public class CandleManager : MonoBehaviour
                     incorrectCount++; // default to incorrect if neither explicitly set
             }
         }
+
+
 
         // Debugging: display current counts
         Debug.Log($"Lit: {litCount}, Correct: {correctCount}, Incorrect: {incorrectCount}");
