@@ -1,13 +1,17 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+
 
 public class CandleManager : MonoBehaviour
 {
     [Header("Candle Tracking")]
     public List<CandleScript> candles = new List<CandleScript>();
+    public List<IncorrectCandleScript> incorrectCandles = new List<IncorrectCandleScript>();
     public int litCount = 0;
     public int correctCount = 0;
     public int incorrectCount = 0;
+    public float extinguishTime;
 
     [Header("Settings")]
     public bool allCorrectRequired = true;
@@ -38,6 +42,8 @@ public class CandleManager : MonoBehaviour
         correctCount = 0;
         incorrectCount = 0;
 
+        
+
         foreach (CandleScript candle in candles)
         {
             if (candle.isLit)
@@ -51,6 +57,11 @@ public class CandleManager : MonoBehaviour
                 else
                     incorrectCount++; // default to incorrect if neither explicitly set
             }
+        }
+
+        if (litCount >= 3f && correctCount != 3f)
+        {
+            StartCoroutine(DelayAction());
         }
 
         // Debugging: display current counts
@@ -76,4 +87,19 @@ public class CandleManager : MonoBehaviour
 
         return hasCorrectCandle; // only true if at least one correct exists
     }
+
+    public IEnumerator DelayAction()
+    {
+        yield return new WaitForSeconds(extinguishTime);
+        foreach (CandleScript candle in candles)
+        {
+            
+            candle.ExtinguishCandle();
+            candle.incorrect = false;
+            candle.correct = false;
+        }
+    }
+
+    
 }
+
