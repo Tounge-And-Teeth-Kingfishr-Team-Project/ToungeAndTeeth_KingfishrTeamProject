@@ -4,6 +4,7 @@ using UnityEngine;
 public class GoToNextTrigger : MonoBehaviour
 {
     public int currentTrigger = 0;
+    public Dialogue[] dialogues;
     public TriggerEnterCallback[] triggers;
     private void OnEnable()
     {
@@ -21,12 +22,14 @@ public class GoToNextTrigger : MonoBehaviour
     }
     void NextTip(TriggerEnterCallback source)
     {
-        if (currentTrigger != triggers.Length - 1)
+        currentTrigger++;
+
+        if (triggers.Length - 1 == currentTrigger)
         {
-            currentTrigger++;
+            triggers[currentTrigger].gameObject.SetActive(true);
+            triggers[currentTrigger].enabled = true;
         }
-        triggers[currentTrigger].gameObject.SetActive(true);
-        triggers[currentTrigger].enabled = true;
+
     }
     private void OnDrawGizmos()
     {
