@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class GlobeManager : MonoBehaviour
 {
@@ -9,14 +8,7 @@ public class GlobeManager : MonoBehaviour
     public GlobeScript globe4;
     public GlobeScript globe5;
 
-    public GameObject Dome;
-    public GameObject Light;
-
-    public Animator domeAnimator;
-    public Animator lightAnimator;
-
-    private bool puzzleSolved = false;
-
+    // Update is called once per frame
     void Update()
     {
         //checks if all the globes are in the correct position
@@ -29,27 +21,5 @@ public class GlobeManager : MonoBehaviour
             globe4.correct = true;
             globe5.correct = true;
         }
-
-        if (globe1.correct == true && globe2.correct == true && globe3.correct == true && globe4.correct == true && globe5.correct == true)
-        {
-            if (!puzzleSolved)
-            {
-                puzzleSolved = true;
-                StartCoroutine(PlayOpenSequence());
-            }
-        }
-    }
-
-    IEnumerator PlayOpenSequence()
-    {
-        // Play animations
-        domeAnimator.SetTrigger("Open");
-        lightAnimator.SetTrigger("Flicker");
-
-        // Wait for animation time (adjust to match animation length)
-        yield return new WaitForSeconds(3f);
-
-        Dome.SetActive(false);
-        Light.SetActive(false);
     }
 }

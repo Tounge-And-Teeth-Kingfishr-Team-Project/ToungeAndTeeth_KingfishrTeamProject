@@ -25,29 +25,21 @@ public class NewKeyFragomentSpawner : MonoBehaviour
 
     private IEnumerator DelayAction()
     {
-        Debug.Log($"candles are melting {gameObject.name} ");
         yield return new WaitForSeconds(meltTime);
 
-        GameObject kf = Instantiate(keyFragment, transform.position, Quaternion.identity);
+        Instantiate(keyFragment, transform.position, Quaternion.identity);
 
-        Debug.Log($"key fragment spawned {kf.name} ");
-
-        //if (candleManager != null)
-        //{
-        //    foreach (CandleScript candle in candleManager.candles)
-        //    {
-        //        if (candle.correct && candle.isLit)
-        //        {
-        //            Destroy(candle.gameObject);
-        //        }
-        //    }
-        //}
+        if (candleManager != null)
+        {
+            foreach (CandleScript candle in candleManager.candles)
+            {
+                if (candle.correct && candle.isLit)
+                {
+                    Destroy(candle.gameObject);
+                }
+            }
+        }
 
         Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log($"Candle {gameObject.name} destroyed");
     }
 }

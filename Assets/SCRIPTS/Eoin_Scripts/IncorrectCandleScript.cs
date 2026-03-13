@@ -30,9 +30,8 @@ public class IncorrectCandleScript : Interactable
         if (!isLit)
         {
             isLit = true;
-            candleManager.litCount++;
             GetComponent<Renderer>().material.color = litColour;
-            
+            candleManager.litCount++;
         }
 
         ShowPrompt(false);

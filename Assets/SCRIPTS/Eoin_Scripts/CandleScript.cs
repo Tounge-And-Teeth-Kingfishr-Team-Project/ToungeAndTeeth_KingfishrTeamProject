@@ -45,15 +45,6 @@ public class CandleScript : Interactable
         ShowPrompt(false);
     }
 
-    public void ExtinguishCandle()
-    {
-        if (isLit == true)
-        {   isLit = false;
-            GetComponent<Renderer>().material.color = unlitColor;
-            Debug.Log("Candle extinguished!");
-        }
-
-    }
     private void LightCandle()
     {
         if (!isLit)
