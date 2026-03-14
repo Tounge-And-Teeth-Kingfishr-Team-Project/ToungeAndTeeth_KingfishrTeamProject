@@ -6,6 +6,7 @@ public class KeyManager : MonoBehaviour
     public bool yellowKey;
     public bool pinkKey;
     public bool blueKey;
+    public bool fancykey;
     public bool shovel;
     public DoorScript yellowDoor;
     public DoorScript pinkDoor;
