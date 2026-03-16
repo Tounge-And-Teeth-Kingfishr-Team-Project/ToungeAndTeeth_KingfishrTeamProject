@@ -12,6 +12,7 @@ public class CandleManager : MonoBehaviour
     public int correctCount = 0;
     public int incorrectCount = 0;
     public float extinguishTime;
+    public float looptime;
 
     [Header("Settings")]
     public bool allCorrectRequired = true;
@@ -22,6 +23,7 @@ public class CandleManager : MonoBehaviour
         litCount = 0;
         correctCount = 0;
         incorrectCount = 0;
+        looptime = 0.0f;
 
         if (candles.Count == 0)
         {
@@ -62,6 +64,9 @@ public class CandleManager : MonoBehaviour
         if (litCount >= 3f && correctCount != 3f)
         {
             StartCoroutine(DelayAction());
+            
+
+            
         }
 
         // Debugging: display current counts
@@ -90,13 +95,14 @@ public class CandleManager : MonoBehaviour
 
     public IEnumerator DelayAction()
     {
-        yield return new WaitForSeconds(extinguishTime);
+        
         foreach (CandleScript candle in candles)
         {
-            
-            candle.ExtinguishCandle();
             candle.incorrect = false;
             candle.correct = false;
+            candle.ExtinguishCandle();
+            yield return new WaitForSeconds(extinguishTime);
+            break;
         }
     }
 

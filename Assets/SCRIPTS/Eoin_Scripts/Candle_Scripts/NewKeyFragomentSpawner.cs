@@ -4,13 +4,19 @@ using System.Collections;
 public class NewKeyFragomentSpawner : MonoBehaviour
 {
     public GameObject keyFragment;
+    public GameObject candleBlaze;
     public CandleManager candleManager;
 
     public float meltTime = 2f;
 
     private bool hasTriggered = false;
 
-    void Update()
+    void Start()
+    { 
+    
+    }
+
+        void Update()
     {
         if (candleManager == null) return;
 

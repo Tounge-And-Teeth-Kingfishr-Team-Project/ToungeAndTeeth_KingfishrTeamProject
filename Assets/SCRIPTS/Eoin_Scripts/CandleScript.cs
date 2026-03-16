@@ -8,6 +8,10 @@ public class CandleScript : Interactable
     public Color unlitColor = Color.black;
     public Color correctColor = Color.green;
 
+    [Header("Candle Particles")]
+    public GameObject candleFlame;
+    public ParticleSystem candleBlaze;
+
     [Header("Candle State")]
     public bool isLit = false;
     public bool correct = false;
@@ -21,7 +25,7 @@ public class CandleScript : Interactable
     void Start()
     {
         // Set initial color
-        GetComponent<Renderer>().material.color = unlitColor;
+        //GetComponent<Renderer>().material.color = unlitColor;
 
         // Hide UI prompt at start
         if (uiPrompt != null)
@@ -31,6 +35,9 @@ public class CandleScript : Interactable
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
             Debug.LogError("Player not found! Make sure the tag is set.");
+
+        candleFlame.SetActive(false);
+
     }
 
     protected override void Interact(GameObject player)
@@ -38,8 +45,9 @@ public class CandleScript : Interactable
         if (!isLit)
         {
             isLit = true;
-            GetComponent<Renderer>().material.color = litColor;
+            //GetComponent<Renderer>().material.color = litColor;
             Debug.Log("Candle lit!");
+            candleFlame.SetActive(true);
         }
 
         ShowPrompt(false);
@@ -49,7 +57,8 @@ public class CandleScript : Interactable
     {
         if (isLit == true)
         {   isLit = false;
-            GetComponent<Renderer>().material.color = unlitColor;
+            candleFlame.SetActive(false);
+            //GetComponent<Renderer>().material.color = unlitColor;
             Debug.Log("Candle extinguished!");
         }
 
