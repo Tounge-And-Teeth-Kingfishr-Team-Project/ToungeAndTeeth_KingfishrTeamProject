@@ -8,6 +8,7 @@ public class TalkToFireplaceMan : MonoBehaviour
 {
     private GoToNextTrigger goToNextTrigger;
     public TextMeshProUGUI textComponent;
+    public GameObject uiPanel;
     public bool canTalk = false;
     public bool isTalking = false;
     public string[] lines;
@@ -16,7 +17,7 @@ public class TalkToFireplaceMan : MonoBehaviour
     void Start()
     {
         goToNextTrigger = GetComponent<GoToNextTrigger>();
-        textComponent.enabled = false;
+        uiPanel.SetActive(false);
         textComponent.text = string.Empty;
     }
     void Update()
@@ -52,7 +53,7 @@ public class TalkToFireplaceMan : MonoBehaviour
     {
         if (index == -1)
         {
-            textComponent.enabled = true;
+            uiPanel.SetActive(true);
             Debug.Log("true");
             gameObject.SetActive(true);
             index = 0;
@@ -80,7 +81,7 @@ public class TalkToFireplaceMan : MonoBehaviour
         else
         {
             index = -1;
-            textComponent.enabled = false;
+            uiPanel.SetActive(false);
             textComponent.text = string.Empty;
             isTalking = false;
         }

@@ -24,7 +24,7 @@ public class GoToNextTrigger : MonoBehaviour
     {
         currentTrigger++;
 
-        if (triggers.Length - 1 == currentTrigger)
+        if (triggers.Length !> currentTrigger)
         {
             triggers[currentTrigger].gameObject.SetActive(true);
             triggers[currentTrigger].enabled = true;
