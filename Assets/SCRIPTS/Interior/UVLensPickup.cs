@@ -4,7 +4,7 @@ using System.Collections;
 public class UVLensPickup : Interactable
 {
     [Header("Player & Flashlight")]
-    public GameObject playerFlashlightUV;   // Assign the UV light object on the flashlight
+    public FlashlightController playerFlashlightUV;   // Assign the UV light object on the flashlight
 
     [Header("UI")]
     public GameObject controlsUI;           // Controls instructions UI
@@ -16,7 +16,7 @@ public class UVLensPickup : Interactable
     {
         // Ensure UV light is off at start
         if (playerFlashlightUV != null)
-            playerFlashlightUV.SetActive(false);
+            playerFlashlightUV.enabled = false;
 
         // Hide controls UI
         if (controlsUI != null)
@@ -31,7 +31,7 @@ public class UVLensPickup : Interactable
 
         // Enable the UV light
         if (playerFlashlightUV != null)
-            playerFlashlightUV.SetActive(true);
+            playerFlashlightUV.enabled = true;
 
         // Show controls UI
         if (controlsUI != null)
