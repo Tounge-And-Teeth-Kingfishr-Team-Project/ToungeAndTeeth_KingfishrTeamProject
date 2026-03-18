@@ -14,6 +14,7 @@ public class FireplaceManIntroductionCutscene : MonoBehaviour
     public GameObject player;
     //public GameObject virtualCamera;
     public PlayableDirector cutscene;
+    public float timelineSpeed = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +58,7 @@ public class FireplaceManIntroductionCutscene : MonoBehaviour
             }
             player.GetComponent<PlayerMovement>().enabled = false;
             cutscene.Play();
+            cutscene.playableGraph.GetRootPlayable(0).SetSpeed(timelineSpeed);
             cutsceneTrigger.enabled = false;
             StartCoroutine(waitForCutsceneFinish());
         }

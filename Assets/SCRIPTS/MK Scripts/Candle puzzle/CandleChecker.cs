@@ -8,7 +8,7 @@ public class CandleChecker : MonoBehaviour
     public bool correct;
 
     public bool canLight = false;
-    public bool isLit;
+    public bool isLit = false;
     public ParticleSystem fire;
     public GameObject candleCounter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +23,7 @@ public class CandleChecker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (canLight)
+            if (canLight && !isLit)
             {
                 candleCounter.GetComponent<CandleCounter>().candlesLit++;
                 candleCounter.GetComponent<CandleCounter>().candleCheckers.Add(this);
