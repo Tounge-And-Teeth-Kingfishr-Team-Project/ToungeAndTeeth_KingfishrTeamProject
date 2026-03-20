@@ -80,6 +80,42 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = (transform.right * moveHorizontal + transform.forward * moveForward).normalized;
         Vector3 targetVelocity = movement * MoveSpeed;
 
+        // Cast a ray to check the ground in front of the player.
+        // We use this to figure out whether the player is on a slope.
+        RaycastHit hit;
+        // Start the ray near the player's feet.
+        Vector3 rayOrigin = transform.position - (Vector3.up * (playerHeight / 2 - 0.5f));
+        // Point mostly downward, but slightly forward so we can detect the slope ahead.
+        Vector3 rayDirection = (Vector3.down + transform.forward * 0.5f).normalized;
+        // Draw the ray in Scene view to help with debugging.
+        Debug.DrawRay(rayOrigin, rayDirection * 2f, Color.cyan);
+
+
+        
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, 2f, groundLayer))
+        {
+            // Compare the ground's normal against world up to get the slope angle.
+            float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
+            
+            // Only apply climb assist on valid slopes (not flat and not near-vertical walls).
+            if (slopeAngle > 0 && slopeAngle < 80f)
+            {
+                // Find downhill direction along the slope surface.
+                Vector3 downhillDirection = Vector3.ProjectOnPlane(Vector3.down, hit.normal).normalized;
+                // Uphill is the opposite of downhill.
+                Vector3 uphillDirection = -downhillDirection;
+                // True only when player input is mostly pointing uphill.
+                bool movingUphill = movement.sqrMagnitude > 0.001f && Vector3.Dot(movement, uphillDirection) > 0.1f;
+
+                if (movingUphill)
+                {
+                    // Push slightly upward and forward to help the player climb.
+                    Vector3 climbAssistDirection = (movement + Vector3.up * 0.35f).normalized;
+                    rb.AddForce(climbAssistDirection * 15f, ForceMode.Acceleration);
+                }
+            }
+        }
+
         // Apply movement to the Rigidbody
         Vector3 velocity = rb.linearVelocity;
         velocity.x = targetVelocity.x;
