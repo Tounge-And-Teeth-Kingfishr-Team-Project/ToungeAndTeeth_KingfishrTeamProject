@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 2938275587638461529}
   - component: {fileID: 944014943436254968}
   - component: {fileID: 8657570309186702146}
+  - component: {fileID: 1920860392676331972}
   m_Layer: 0
   m_Name: PlantPots_DeadPlants_Modeled:PlantPot1
   m_TagString: Untagged
@@ -387,6 +388,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1920860392676331972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169821667247310957}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.036455784, y: 0.042465918, z: 0.036455806}
+  m_Center: {x: 0.0000000018626458, y: 0.011996448, z: -0.000000054948032}
 --- !u!1 &3366782460420739210
 GameObject:
   m_ObjectHideFlags: 0
