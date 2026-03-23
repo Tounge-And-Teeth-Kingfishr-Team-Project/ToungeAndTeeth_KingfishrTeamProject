@@ -10,6 +10,10 @@ public class UVLensPickup : Interactable
     public GameObject controlsUI;           // Controls instructions UI
     public float uiDisplayTime = 3f;        // Seconds to show the UI
 
+    [Header("Renderers")]
+    public MeshRenderer renderer1;
+    public MeshRenderer renderer2;
+
     private bool uvLensCollected = false;
 
     private void Start()
@@ -45,6 +49,8 @@ public class UVLensPickup : Interactable
         if (col != null) col.enabled = false;
 
         base.Interact(player);
+        renderer1.enabled = false;
+        renderer2.enabled = false;
     }
 
     private IEnumerator ShowControlsUI()

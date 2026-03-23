@@ -9,6 +9,7 @@ public class TalkToFireplaceMan : MonoBehaviour
     private GoToNextTrigger goToNextTrigger;
     public TextMeshProUGUI textComponent;
     public GameObject uiPanel;
+    public Rigidbody playerRB;
     public bool canTalk = false;
     public bool isTalking = false;
     public string[] lines;
@@ -51,6 +52,9 @@ public class TalkToFireplaceMan : MonoBehaviour
     }
     public void StartDialogue()
     {
+        canTalk = true;
+        isTalking = true;
+        playerRB.angularVelocity = Vector3.zero;
         if (index == -1)
         {
             uiPanel.SetActive(true);
