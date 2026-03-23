@@ -42,7 +42,9 @@ public class IntroCutscene : MonoBehaviour
         {
             g.SetActive(true);
         }
-        Instantiate(player, putPlayerHere);
+        GameObject thePlayer;
+        thePlayer = Instantiate(player, putPlayerHere);
+        thePlayer.GetComponent<FlashlightController>().enabled = false;
         Destroy(gameObject);
     }
 }
