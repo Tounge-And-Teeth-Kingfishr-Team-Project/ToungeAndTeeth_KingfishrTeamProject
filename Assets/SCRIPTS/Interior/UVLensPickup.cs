@@ -49,8 +49,8 @@ public class UVLensPickup : Interactable
         if (col != null) col.enabled = false;
 
         base.Interact(player);
-        renderer1.enabled = false;
-        renderer2.enabled = false;
+        if (renderer1 != null) renderer1.enabled = false;
+        if (renderer2 != null) renderer2.enabled = false;
     }
 
     private IEnumerator ShowControlsUI()

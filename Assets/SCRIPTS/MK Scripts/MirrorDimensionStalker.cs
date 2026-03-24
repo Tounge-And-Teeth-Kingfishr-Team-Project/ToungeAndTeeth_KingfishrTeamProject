@@ -11,7 +11,7 @@ public class MirrorDimensionStalker : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        targetDestination = GameObject.Find("Player").transform;
+        targetDestination = GameObject.Find("Player_UVFLASHLIGHT").transform;
     }
 
     // Update is called once per frame
