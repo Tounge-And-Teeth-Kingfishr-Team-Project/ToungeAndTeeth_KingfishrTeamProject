@@ -4,13 +4,21 @@ using System.Collections;
 public class NewKeyFragomentSpawner : MonoBehaviour
 {
     public GameObject keyFragment;
+    public GameObject candleBlaze;
     public CandleManager candleManager;
+    public CandleScript candleScript;
 
-    public float meltTime = 2f;
+
+    public float meltTime = 4f;
 
     private bool hasTriggered = false;
 
-    void Update()
+    void Start()
+    {
+        meltTime = 4f;
+    }
+
+        void Update()
     {
         if (candleManager == null) return;
 
@@ -25,9 +33,11 @@ public class NewKeyFragomentSpawner : MonoBehaviour
 
     private IEnumerator DelayAction()
     {
+        candleBlaze.SetActive(true);
         Debug.Log($"candles are melting {gameObject.name} ");
         yield return new WaitForSeconds(meltTime);
-
+        candleScript.candleFlame.SetActive(false);
+        candleBlaze.SetActive(false);
         GameObject kf = Instantiate(keyFragment, transform.position, Quaternion.identity);
 
         Debug.Log($"key fragment spawned {kf.name} ");
