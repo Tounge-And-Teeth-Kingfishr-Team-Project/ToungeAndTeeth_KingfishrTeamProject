@@ -1512,6 +1512,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1553733225279470880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3912633982716999883}
+  m_Layer: 0
+  m_Name: FrontDoorSceneswitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3912633982716999883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553733225279470880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4640601994745370861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1631021008121381613
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,6 +8794,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2539899617631056908, guid: bea8bc338933436498d43cd67bd2f959, type: 3}
       insertIndex: 6
       addedObject: {fileID: 7069660538730446404}
+    - targetCorrespondingSourceObject: {fileID: 2539899617631056908, guid: bea8bc338933436498d43cd67bd2f959, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3912633982716999883}
     - targetCorrespondingSourceObject: {fileID: 2539899617631056908, guid: bea8bc338933436498d43cd67bd2f959, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5155293943165087220}
