@@ -25,6 +25,13 @@ public class IntroCutscene : MonoBehaviour
         cutscene.Play();
         StartCoroutine(waitForCutsceneFinish());
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            cutscene.Stop();
+        }
+    }
     private IEnumerator waitForCutsceneFinish()
     {
         // Wait until the timeline finishes playing
