@@ -1,10 +1,11 @@
 using NUnit.Framework;
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
-using static UnityEngine.UI.Image;
+using UnityEngine.UI;
 
 public class BathroomCutscene : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class BathroomCutscene : MonoBehaviour
     //public GameObject virtualCamera;
     public PlayableDirector cutscene;
     public string nextScene;
+
+    [Header ("UI")]
+    public GameObject loadingScreen;
+    public Image loadingBarFill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,7 +44,7 @@ public class BathroomCutscene : MonoBehaviour
         {
             g.SetActive(true);
         }
-        SceneManager.LoadScene(nextScene);
+        StartCoroutine(LoadSceneAsync());
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -58,6 +63,18 @@ public class BathroomCutscene : MonoBehaviour
             cutscene.Play();
             cutsceneTrigger.enabled = false;
             StartCoroutine(waitForCutsceneFinish());
+        }
+    }
+
+    IEnumerator LoadSceneAsync()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(nextScene);
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBarFill.fillAmount = progressValue;
+            yield return null;
         }
     }
 }
