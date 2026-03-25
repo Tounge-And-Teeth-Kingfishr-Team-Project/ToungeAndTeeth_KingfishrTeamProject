@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5986600241023306033}
   - component: {fileID: 655848182531002000}
   - component: {fileID: 924304300978742967}
+  - component: {fileID: 221634201639411899}
   m_Layer: 0
   m_Name: Sound trigger
   m_TagString: Untagged
@@ -64,8 +65,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ad8c4184a0bd0784fada35ec54fd1264, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 15458df947854fd48baf7d3533c40538, type: 3}
+  m_Resource: {fileID: 8300000, guid: 15458df947854fd48baf7d3533c40538, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -151,3 +152,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &221634201639411899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962823514851249381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfac16c3f4fda6428c559cd98ed7353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
