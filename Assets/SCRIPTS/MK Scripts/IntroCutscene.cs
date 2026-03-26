@@ -46,7 +46,7 @@ public class IntroCutscene : MonoBehaviour
         GameObject thePlayer;
         thePlayer = Instantiate(player, putPlayerHere);
         thePlayer.GetComponent<FlashlightController>().enabled = false;
-        pauseScript.pauseOn = true;
+        pauseScript.pauseActive = true;
         Destroy(gameObject);
     }
 }

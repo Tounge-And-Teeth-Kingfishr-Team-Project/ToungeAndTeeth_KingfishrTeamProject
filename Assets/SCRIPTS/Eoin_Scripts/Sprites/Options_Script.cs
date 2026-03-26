@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Options_Script : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class Options_Script : MonoBehaviour
     public void StartButton() 
     {
         SceneManager.LoadScene(sceneIndex);
-        
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
 }

@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,27 +8,46 @@ public class Pause_Script : MonoBehaviour
     public Button controlsButton;
     public GameObject pauseScreen;
     public GameObject controlsScreen;
-    public bool pauseOn;
+    public bool pauseActive;
+    public bool isPaused;
 
     public int sceneIndex = -1; // Scene to load
     void Start()
     {
         pauseScreen.SetActive(false);
         controlsScreen.SetActive(false);
+        pauseActive = false;
+        isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if ()
+
+        //if (Input.GetButtonDown("Pause") && pauseActive == true)
         //{
-        //    pauseOn == true
+        //    Pause();
         //}
     }
 
+    void Pause() 
+    {
+        if (isPaused == false) 
+        {
+            pauseScreen.SetActive(true);
+            isPaused = true;
+        }
+
+        if (isPaused == true)
+        {
+            pauseScreen.SetActive(false);
+            isPaused = false;
+        }
+
+    }
     public void OptionsButton()
     {
-        if (pauseOn == true)
+        if (pauseActive == true)
         {
             pauseScreen.SetActive(false);
             controlsScreen.SetActive(true);
@@ -38,6 +58,5 @@ public class Pause_Script : MonoBehaviour
     public void QuitButton() 
     {
         SceneManager.LoadScene(sceneIndex);
-        
     }
 }
