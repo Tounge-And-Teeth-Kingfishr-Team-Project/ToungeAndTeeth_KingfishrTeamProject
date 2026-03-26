@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class Mirror_Shard_Manager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Mirror_Shard_Manager : MonoBehaviour
     public bool mirrorShard3Collected;
     public bool mirrorShard4Collected;
     public bool mirrorShard5Collected;
+    public float addTime;
     void Start()
     {
         
@@ -41,4 +44,5 @@ public class Mirror_Shard_Manager : MonoBehaviour
             mirrorShard5Collected = true;
         }
     }
+
 }
