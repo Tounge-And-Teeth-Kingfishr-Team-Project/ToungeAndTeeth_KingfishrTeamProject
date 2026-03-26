@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class SoundTrigger : MonoBehaviour
 {
-    private AudioSource sound;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        sound = GetComponent<AudioSource>();
-    }
+    public AudioSource sound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Rigidbody>() != null)
