@@ -57,7 +57,7 @@ public class InputCode : MonoBehaviour
     {
         input = password.text;
         Debug.Log(input);
-        if (input == theCode)
+        if (input.ToLower() == theCode.ToLower())
         {
             Correct();
         }
