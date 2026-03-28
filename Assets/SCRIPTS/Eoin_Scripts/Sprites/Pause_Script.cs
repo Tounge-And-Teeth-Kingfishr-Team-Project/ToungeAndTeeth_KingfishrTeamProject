@@ -24,10 +24,11 @@ public class Pause_Script : MonoBehaviour
     void Update()
     {
 
-        //if (Input.GetButtonDown("Pause") && pauseActive == true)
-        //{
-        //    Pause();
-        //}
+        if (Input.GetKeyDown(KeyCode.Escape) )
+        {
+            
+            Pause();
+        }
     }
 
     void Pause() 
@@ -37,15 +38,23 @@ public class Pause_Script : MonoBehaviour
             pauseScreen.SetActive(true);
             isPaused = true;
         }
-
-        if (isPaused == true)
+        else if (isPaused == true)
         {
             pauseScreen.SetActive(false);
             isPaused = false;
         }
 
     }
-    public void OptionsButton()
+    public void ResumeButton()
+    {
+        if (isPaused == true)
+        {
+            pauseScreen.SetActive(false);
+            isPaused = false;
+        }
+    }
+
+    public void ControlsButton()
     {
         if (pauseActive == true)
         {
