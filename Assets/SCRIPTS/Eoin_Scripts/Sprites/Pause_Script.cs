@@ -55,16 +55,18 @@ public class Pause_Script : MonoBehaviour
 
     public void ControlsButton()
     {
-        if (pauseActive == true)
-        {
-            pauseScreen.SetActive(false);
-            controlsScreen.SetActive(true);
-        }
-
+        pauseScreen.SetActive(false);
+        controlsScreen.SetActive(true);
     }
 
     public void QuitButton() 
     {
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void BackButton() 
+    {
+        pauseScreen.SetActive(true);
+        controlsScreen.SetActive(false);
     }
 }
