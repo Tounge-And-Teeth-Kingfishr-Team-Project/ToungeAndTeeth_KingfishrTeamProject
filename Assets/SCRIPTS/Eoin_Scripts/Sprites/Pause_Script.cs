@@ -26,7 +26,6 @@ public class Pause_Script : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) )
         {
-            
             Pause();
         }
     }
