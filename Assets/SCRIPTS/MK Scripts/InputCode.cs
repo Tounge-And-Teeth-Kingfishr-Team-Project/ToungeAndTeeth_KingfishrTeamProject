@@ -70,7 +70,7 @@ public class InputCode : MonoBehaviour
     }
     void Correct()
     {
-        Debug.Log("Correct!");
+        Debug.Log("CorrectCheck!");
         StopType();
 ;    }
     private void OnTriggerEnter(Collider other)

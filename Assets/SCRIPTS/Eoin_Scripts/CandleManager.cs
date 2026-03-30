@@ -70,7 +70,7 @@ public class CandleManager : MonoBehaviour
         }
 
         // Debugging: display current counts
-        Debug.Log($"Lit: {litCount}, Correct: {correctCount}, Incorrect: {incorrectCount}");
+        Debug.Log($"Lit: {litCount}, CorrectCheck: {correctCount}, Incorrect: {incorrectCount}");
     }
 
     public bool AreAllCorrectCandlesLit()
