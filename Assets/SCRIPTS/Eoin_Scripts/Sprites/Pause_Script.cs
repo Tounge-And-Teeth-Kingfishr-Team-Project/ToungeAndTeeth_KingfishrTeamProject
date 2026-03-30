@@ -16,15 +16,13 @@ public class Pause_Script : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         controlsScreen.SetActive(false);
-        pauseActive = false;
         isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape) )
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseActive == true)
         {
             Pause();
         }
@@ -36,11 +34,13 @@ public class Pause_Script : MonoBehaviour
         {
             pauseScreen.SetActive(true);
             isPaused = true;
+            //Time.timeScale = 0f;
         }
         else if (isPaused == true)
         {
             pauseScreen.SetActive(false);
             isPaused = false;
+            //Time.timeScale = 1f;
         }
 
     }
