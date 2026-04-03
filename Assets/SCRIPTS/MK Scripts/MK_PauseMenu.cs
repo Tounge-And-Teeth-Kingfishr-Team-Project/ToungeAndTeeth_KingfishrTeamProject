@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MK_PauseMenu : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class MK_PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         player.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -41,10 +42,12 @@ public class MK_PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("");
     }
     public void QuitGame()
     {
-
+        Debug.Log("Application quit");
+        Application.Quit();
     }
 }
