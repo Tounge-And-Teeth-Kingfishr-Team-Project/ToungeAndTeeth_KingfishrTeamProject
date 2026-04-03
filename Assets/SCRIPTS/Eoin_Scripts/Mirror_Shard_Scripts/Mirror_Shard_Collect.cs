@@ -4,6 +4,7 @@ using UnityEngine;
 public class Mirror_Shard_Collect : Interactable
 {
     public bool shardCollected;
+    public MirrorShardIconScript iconScript;
     void Start()
     {
      shardCollected = false;
@@ -13,5 +14,10 @@ public class Mirror_Shard_Collect : Interactable
     {
         shardCollected = true;
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        iconScript.shardCount++;
     }
 }

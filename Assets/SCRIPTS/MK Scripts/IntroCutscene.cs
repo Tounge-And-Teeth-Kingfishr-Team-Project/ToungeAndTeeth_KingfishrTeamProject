@@ -13,6 +13,7 @@ public class IntroCutscene : MonoBehaviour
     //public GameObject virtualCamera;
     public PlayableDirector cutscene;
     public ParticleSystem smoke;
+    public Pause_Script pauseScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,6 +53,7 @@ public class IntroCutscene : MonoBehaviour
         GameObject thePlayer;
         thePlayer = Instantiate(player, putPlayerHere);
         thePlayer.GetComponent<FlashlightController>().enabled = false;
+        pauseScript.pauseActive = true;
         Destroy(gameObject);
     }
 }

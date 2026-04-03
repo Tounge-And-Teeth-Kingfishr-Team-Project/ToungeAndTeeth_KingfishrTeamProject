@@ -1,0 +1,24 @@
+using UnityEngine;
+
+public class ExploreTextEnasble : MonoBehaviour
+{
+    public ExteriorObjetiveScript exteriorScript;
+    void Start()
+    {
+        
+    }
+
+    
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            exteriorScript.exploreOn = true;
+        }
+    }
+}
