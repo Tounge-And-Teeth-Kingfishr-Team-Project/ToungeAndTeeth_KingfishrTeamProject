@@ -5,6 +5,7 @@ public class MK_PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject controlsUI;
     public PlayerMovement player;
 
     // Update is called once per frame
@@ -39,6 +40,16 @@ public class MK_PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         gameIsPaused = false;
+    }
+    public void Controls()
+    {
+        pauseMenuUI.SetActive(false);
+        controlsUI.SetActive(true);
+    }
+    public void BackToPauseUI()
+    {
+        pauseMenuUI.SetActive(true);
+        controlsUI.SetActive(false);
     }
     public void LoadMenu()
     {
