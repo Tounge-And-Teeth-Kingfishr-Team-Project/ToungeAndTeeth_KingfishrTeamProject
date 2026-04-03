@@ -8,6 +8,11 @@ public class MK_PauseMenu : MonoBehaviour
     public GameObject controlsUI;
     public PlayerMovement player;
 
+    private void Start()
+    {
+        pauseMenuUI.SetActive(false);
+        controlsUI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
