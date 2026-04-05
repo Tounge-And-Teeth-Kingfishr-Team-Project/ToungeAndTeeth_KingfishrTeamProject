@@ -1076,12 +1076,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686582470202573804}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.42, y: -2.31, z: 5.56}
   m_LocalScale: {x: 9.610422, y: 0.060819328, z: 2.4775443}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5238759226763249782}
+  m_Father: {fileID: 2302728872115977195}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2122857059748612958
 MeshFilter:
@@ -4025,8 +4025,6 @@ Transform:
   - {fileID: 2359752426008000782}
   - {fileID: 4353204050872808527}
   - {fileID: 1036706070251754158}
-  - {fileID: 2157341537465686005}
-  - {fileID: 6045707442626783546}
   - {fileID: 7701532366395238125}
   - {fileID: 4572401017668203203}
   - {fileID: 5143880105983134733}
@@ -5085,7 +5083,7 @@ Transform:
   m_LocalScale: {x: 16.42, y: 0.060819328, z: 3.0400064}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5238759226763249782}
+  m_Father: {fileID: 2302728872115977195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3063951423327823837
 MeshFilter:
@@ -6275,6 +6273,8 @@ Transform:
   - {fileID: 5766549773576800811}
   - {fileID: 4834247827753043440}
   - {fileID: 2291449876800196759}
+  - {fileID: 2157341537465686005}
+  - {fileID: 6045707442626783546}
   m_Father: {fileID: 5238759226763249782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7814820671144013210
@@ -9018,6 +9018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookshelfV2_DONE (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.024013
@@ -9193,6 +9197,10 @@ PrefabInstance:
     - target: {fileID: 7483798606198750450, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
       propertyPath: m_Name
       value: Bookshelf_V1_DONE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483798606198750450, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10312,6 +10320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookshelfV2_DONE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.9721694
@@ -10439,6 +10451,10 @@ PrefabInstance:
     - target: {fileID: 3537940525058161222, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
       propertyPath: m_Name
       value: Sconce_UV_DONE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537940525058161222, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102047606082710142, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12099,6 +12115,10 @@ PrefabInstance:
     - target: {fileID: 4387807764771290549, guid: 7c5f266ebb73c954587405a67d9ff792, type: 3}
       propertyPath: m_Name
       value: CardboardBox_Open1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387807764771290549, guid: 7c5f266ebb73c954587405a67d9ff792, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15637,6 +15657,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookshelfV2_DONE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.024013
@@ -15768,6 +15792,10 @@ PrefabInstance:
     - target: {fileID: 1342219849989544275, guid: 107dcb13e28fa484a9c23029407c00e5, type: 3}
       propertyPath: m_Name
       value: CardboardBox_Closed2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342219849989544275, guid: 107dcb13e28fa484a9c23029407c00e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5773460625501346390, guid: 107dcb13e28fa484a9c23029407c00e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16927,6 +16955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtains_UV_DONE (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8256741765290480787, guid: 8802e0e8b1396d34c86f70cd2e148134, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17224,6 +17256,10 @@ PrefabInstance:
     - target: {fileID: 3537940525058161222, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
       propertyPath: m_Name
       value: Sconce_UV_DONE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537940525058161222, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102047606082710142, guid: ee012bae21ea3d74b9b5632f5a0fac4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18552,6 +18588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dresser_DONE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 816239874753435130, guid: fe54fa589dd0a2d41aef678c16403298, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5142124614263238798, guid: fe54fa589dd0a2d41aef678c16403298, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.099394
@@ -18715,6 +18755,10 @@ PrefabInstance:
     - target: {fileID: 4387807764771290549, guid: 7c5f266ebb73c954587405a67d9ff792, type: 3}
       propertyPath: m_Name
       value: CardboardBox_Open1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387807764771290549, guid: 7c5f266ebb73c954587405a67d9ff792, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19391,6 +19435,10 @@ PrefabInstance:
     - target: {fileID: 3363077566802527194, guid: 914e3f5f7816fcc40bed1e697436ba61, type: 3}
       propertyPath: m_Name
       value: StandingLamp_UV_DONE (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363077566802527194, guid: 914e3f5f7816fcc40bed1e697436ba61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20455,6 +20503,10 @@ PrefabInstance:
     - target: {fileID: 7483798606198750450, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
       propertyPath: m_Name
       value: Bookshelf_V1_DONE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483798606198750450, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21801,6 +21853,10 @@ PrefabInstance:
     - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_Name
       value: BookshelfV2_DONE (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
@@ -24367,6 +24423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armchair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3973033339441559729, guid: 865b654bf77215a4a8a8121e00849162, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24590,6 +24650,10 @@ PrefabInstance:
     - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_Name
       value: BookshelfV2_DONE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
@@ -25528,6 +25592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookshelfV2_DONE (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.024013
@@ -25637,6 +25705,10 @@ PrefabInstance:
     - target: {fileID: 7221987075795729128, guid: 780fa4c952de3484cb210771509c605f, type: 3}
       propertyPath: m_Name
       value: PlantPot1_DeadPlant_DONE (1) 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221987075795729128, guid: 780fa4c952de3484cb210771509c605f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25845,6 +25917,10 @@ PrefabInstance:
     - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_Name
       value: BookshelfV2_DONE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199309308385488965, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7454212019836858807, guid: 4b1c9a28c0cd8e0419d241612ea5d3b7, type: 3}
       propertyPath: m_LocalScale.x
@@ -26789,6 +26865,10 @@ PrefabInstance:
     - target: {fileID: 8256741765290480787, guid: 8802e0e8b1396d34c86f70cd2e148134, type: 3}
       propertyPath: m_Name
       value: Curtains_UV_DONE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256741765290480787, guid: 8802e0e8b1396d34c86f70cd2e148134, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31035,6 +31115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Curtains_UV_DONE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8256741765290480787, guid: 8802e0e8b1396d34c86f70cd2e148134, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32364,6 +32448,10 @@ PrefabInstance:
     - target: {fileID: 3069669754990896215, guid: 92a52cccf3202804bb1a75ab226215ab, type: 3}
       propertyPath: m_Name
       value: Couch_DONE (1) 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069669754990896215, guid: 92a52cccf3202804bb1a75ab226215ab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6943530716773293655, guid: 92a52cccf3202804bb1a75ab226215ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34377,6 +34465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp2_UV_DONE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 996599880068408910, guid: 5f1c430493831f4408e93442caa0084b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7762277799916953813, guid: 5f1c430493831f4408e93442caa0084b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.251003
@@ -34416,6 +34508,10 @@ PrefabInstance:
     - target: {fileID: 7762277799916953813, guid: 5f1c430493831f4408e93442caa0084b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491132142640546790, guid: 5f1c430493831f4408e93442caa0084b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
