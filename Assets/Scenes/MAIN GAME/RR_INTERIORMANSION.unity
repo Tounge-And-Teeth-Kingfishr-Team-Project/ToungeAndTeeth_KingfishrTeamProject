@@ -1637,6 +1637,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35112489807cb294cbad3101b999846a, type: 3}
+--- !u!1001 &252795242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.36222953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0069352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.9615107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505810439553384101, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813980303818484657, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: uiPrompt
+      value: 
+      objectReference: {fileID: 1211923721}
+    - target: {fileID: 6410053397983846372, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
+      propertyPath: m_Name
+      value: Rubble
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e7bec66bbc1d0444a4c16b77ba9f720, type: 3}
 --- !u!1 &288030689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4491683776788269263, guid: a8293c638b847e4489624f7510938c32, type: 3}
@@ -4531,9 +4592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Looks like I need a shovel..
-
-    (E to interact)'
+  m_text: Looks like I need a shovel..
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9452,3 +9511,4 @@ SceneRoots:
   - {fileID: 1425518701}
   - {fileID: 3781039}
   - {fileID: 4698516219637773350}
+  - {fileID: 252795242}

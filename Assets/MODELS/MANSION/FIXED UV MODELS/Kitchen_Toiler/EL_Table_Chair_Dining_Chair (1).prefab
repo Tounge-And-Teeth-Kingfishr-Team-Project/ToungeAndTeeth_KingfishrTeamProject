@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3844822519134622239}
   - component: {fileID: 8813673722217863492}
   - component: {fileID: 6603012126876797962}
+  - component: {fileID: 134973842352924782}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube9
   m_TagString: Untagged
@@ -86,6 +87,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &134973842352924782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436670351855693317}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010000007, y: 0.010000003, z: 0.011845254}
+  m_Center: {x: -0.000000021603398, y: -0.000000013976927, z: 0.00092261797}
 --- !u!1 &2736530776798032482
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +119,7 @@ GameObject:
   - component: {fileID: 182480972255256779}
   - component: {fileID: 5540571208450248884}
   - component: {fileID: 7839777246942220852}
+  - component: {fileID: 4972114238465022170}
   m_Layer: 0
   m_Name: EL_Table_Chair:polySurface1
   m_TagString: Untagged
@@ -172,6 +195,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4972114238465022170
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736530776798032482}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.029664582, y: 0.04050723, z: 0.0040842695}
+  m_Center: {x: 0.000000029757379, y: 0.0014572464, z: -0.000036960013}
 --- !u!1 &2946519301926944453
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +227,7 @@ GameObject:
   - component: {fileID: 6213802590491585201}
   - component: {fileID: 2870883682987173526}
   - component: {fileID: 5421557693399200907}
+  - component: {fileID: 1599841085546624757}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube7
   m_TagString: Untagged
@@ -258,6 +303,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1599841085546624757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946519301926944453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0100000035, y: 0.010000001, z: 0.011845252}
+  m_Center: {x: 0.00000005965276, y: 0.00000001560889, z: 0.00092262286}
 --- !u!1 &3678873969688334568
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +333,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3912232607909038801}
-  - component: {fileID: 73229875824710907}
   m_Layer: 0
   m_Name: EL_Table_Chair_Dining_Chair (1)
   m_TagString: Untagged
@@ -298,28 +363,6 @@ Transform:
   - {fileID: 182480972255256779}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &73229875824710907
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3678873969688334568}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3835894340829941857
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +374,7 @@ GameObject:
   - component: {fileID: 8300005182029429626}
   - component: {fileID: 3980902808167912989}
   - component: {fileID: 2972659487835042932}
+  - component: {fileID: 2267469172325390762}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube11
   m_TagString: Untagged
@@ -406,6 +450,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2267469172325390762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835894340829941857}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010000007, y: 0.014696911, z: 0.015777173}
+  m_Center: {x: -0.000000017247785, y: 0.00054432533, z: -0.00056199403}
 --- !u!1 &4645558580000736933
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +482,7 @@ GameObject:
   - component: {fileID: 8270398482387666278}
   - component: {fileID: 8027755662744822040}
   - component: {fileID: 5608012480910236618}
+  - component: {fileID: 3957245258094591511}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube8
   m_TagString: Untagged
@@ -492,6 +558,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3957245258094591511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645558580000736933}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010000007, y: 0.010000001, z: 0.011845254}
+  m_Center: {x: -0.00000012102898, y: 6.894698e-10, z: 0.0009226217}
 --- !u!1 &6799751386383453270
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +590,7 @@ GameObject:
   - component: {fileID: 3362947577120090492}
   - component: {fileID: 5071455047162458200}
   - component: {fileID: 1592981518989637878}
+  - component: {fileID: 6943693709898552073}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube6
   m_TagString: Untagged
@@ -578,6 +666,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6943693709898552073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799751386383453270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0100000035, y: 0.010000001, z: 0.011845252}
+  m_Center: {x: -0.000000059556527, y: 0.00000001560889, z: 0.00092263403}
 --- !u!1 &7290289291068272673
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +698,7 @@ GameObject:
   - component: {fileID: 6991493867044688018}
   - component: {fileID: 3266707393412969698}
   - component: {fileID: 6800796892623049251}
+  - component: {fileID: 8644026439258555116}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube3
   m_TagString: Untagged
@@ -664,6 +774,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8644026439258555116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290289291068272673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011290457, y: 0.010000003, z: 0.010000004}
+  m_Center: {x: 0.000000008381906, y: 0.000000004656618, z: -0.0000000020954758}
 --- !u!1 &8580338433165818951
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +806,7 @@ GameObject:
   - component: {fileID: 7418408422346837295}
   - component: {fileID: 3504534282955964875}
   - component: {fileID: 3716509244609512607}
+  - component: {fileID: 8560508561534886630}
   m_Layer: 0
   m_Name: EL_Table_Chair:pCube10
   m_TagString: Untagged
@@ -750,3 +882,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8560508561534886630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580338433165818951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011131414, y: 0.024453063, z: 0.010000005}
+  m_Center: {x: 2.6920865e-11, y: 0.0072265347, z: -0.0000000018962967}
