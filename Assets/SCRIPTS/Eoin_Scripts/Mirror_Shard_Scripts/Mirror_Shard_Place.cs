@@ -8,6 +8,9 @@ public class Mirror_Shard_Place : Interactable
     public MeshRenderer shard3;
     public MeshRenderer shard4;
     public MeshRenderer shard5;
+    public MeshRenderer shard6;
+    public MeshRenderer shard7;
+    public MeshRenderer shard8;
     void Start()
     {
         shard1.enabled = false;
@@ -15,6 +18,9 @@ public class Mirror_Shard_Place : Interactable
         shard3.enabled = false;
         shard4.enabled = false;
         shard5.enabled = false;
+        shard6.enabled = false;
+        shard7.enabled = false;
+        shard8.enabled = false;
     }
 
     // Update is called once per frame
@@ -44,6 +50,21 @@ public class Mirror_Shard_Place : Interactable
         {
             shard5.enabled = true;
             mirrorShardManager.mirrorShard5Collected = false;
+        }
+        if (mirrorShardManager.mirrorShard6Collected)
+        {
+            shard6.enabled = true;
+            mirrorShardManager.mirrorShard6Collected = false;
+        }
+        if (mirrorShardManager.mirrorShard7Collected)
+        {
+            shard7.enabled = true;
+            mirrorShardManager.mirrorShard7Collected = false;
+        }
+        if (mirrorShardManager.mirrorShard8Collected)
+        {
+            shard8.enabled = true;
+            mirrorShardManager.mirrorShard8Collected = false;
         }
     }
 }
