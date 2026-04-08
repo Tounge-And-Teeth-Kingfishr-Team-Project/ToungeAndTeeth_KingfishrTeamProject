@@ -59,7 +59,7 @@ public class MK_PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("EL_Tile_Scene");
     }
     public void QuitGame()
     {
