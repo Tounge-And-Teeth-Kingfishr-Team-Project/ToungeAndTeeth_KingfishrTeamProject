@@ -5,10 +5,12 @@ public class MK_KeyManager : MonoBehaviour
     public bool yellowKey = false;
     public bool blueKey = false;
     public bool pinkKey = false;
+    public bool shovel = false;
 
     public Collectable_Manager yellowKeyManager;
     public Collectable_Manager blueKeyManager;
     public Collectable_Manager pinkKeyManager;
+    public Collectable_Manager shovelManager;
 
     private void Update()
     {
@@ -23,6 +25,10 @@ public class MK_KeyManager : MonoBehaviour
         if (pinkKeyManager.collected)
         {
             pinkKey = true;
+        }
+        if (shovelManager.collected)
+        {
+            shovel = true;
         }
     }
 }

@@ -7,7 +7,8 @@ public class Doors_Manager : MonoBehaviour
     {
         Yellow,
         Blue,
-        Pink
+        Pink,
+        Shovel
     }
     [Header("Unlock Requirements")]
     public WhichKey color;
@@ -45,13 +46,40 @@ public class Doors_Manager : MonoBehaviour
         {
             if (keyManager.pinkKey) canUnlock = true;
         }
+        else if (color == WhichKey.Shovel)
+        {
+            if (keyManager.shovel) canUnlock = true;
+        }
     }
     public void UnlockDoor()
     {
         if (canUnlock)
         {
             unlocked = true;
-            StartCoroutine(RotateDoor(openRotation));
+            if (color == WhichKey.Yellow)
+            {
+                keyManager.yellowKeyManager.UIIcon.SetActive(false);
+            }
+            else if (color == WhichKey.Blue)
+            {
+                keyManager.blueKeyManager.UIIcon.SetActive(false);
+            }
+            else if (color == WhichKey.Pink)
+            {
+                keyManager.pinkKeyManager.UIIcon.SetActive(false);
+            }
+            else if (color == WhichKey.Shovel)
+            {
+                keyManager.shovelManager.UIIcon.SetActive(false);
+            }
+            if (color != WhichKey.Shovel)
+            {
+                StartCoroutine(RotateDoor(openRotation));
+            }
+            else
+            {
+                DestroyRubble();
+            }
         }
         else
         {
@@ -79,5 +107,9 @@ public class Doors_Manager : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
+    }
+    void DestroyRubble()
+    {
+        Destroy(gameObject);
     }
 }

@@ -30,12 +30,12 @@ public class RaycastInteraction : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GameObject theHit = hit.collider.gameObject;
-                if (theHit.layer == 7)      //7 is for keys
+                if (theHit.layer == 7)      //7 is for keys (and shovel)
                 {
                     theHit.GetComponent<Collectable_Manager>().IWasCollected();
                     theHit.SetActive(false);
                 }
-                if (theHit.layer == 8)
+                if (theHit.layer == 8)      //8 is for doors (and rubble)
                 {
                     theHit.GetComponent<Doors_Manager>().UnlockDoor();
                 }
