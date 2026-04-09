@@ -15,8 +15,6 @@ public class MoonManager : MonoBehaviour
     public Animator domeAnimator;
     public Animator lightAnimator;
 
-    private bool puzzleSolved = false;
-
     private void Start()
     {
         moonNum = globes.Length;

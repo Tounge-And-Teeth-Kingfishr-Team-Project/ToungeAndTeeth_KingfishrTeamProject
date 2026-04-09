@@ -52,6 +52,10 @@ public class RaycastInteraction : MonoBehaviour
                 {
                     theHit.GetComponent<MoonInteract>().RotateMoon();
                 }
+                if (theHit.layer == 12)     //12 is for text notes
+                {
+                    theHit.GetComponent<NoteRead>().ShowNote();
+                }
                 Debug.Log(hit.collider.gameObject.name);
             }
         }
