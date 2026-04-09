@@ -39,9 +39,9 @@ public class RaycastInteraction : MonoBehaviour
                 }
                 if (theHit.layer == 9)      //9 is for picture frames
                 {
-                    if (theHit.GetComponent<Painting_Script>() != null)
+                    if (theHit.GetComponent<PictureFrameFall>() != null)
                     {
-                        theHit.GetComponent<Painting_Script>();
+                        theHit.GetComponent<PictureFrameFall>().Fall();
                     }
                 }
                 if (theHit.layer == 10)     //10 is for the da vinci box

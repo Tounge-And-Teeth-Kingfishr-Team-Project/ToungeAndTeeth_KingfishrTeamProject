@@ -17,6 +17,7 @@ public class CodePuzzle : MonoBehaviour
     public int listCorrect = 0;
     public CodePuzzlePerSlot[] slots;
     public GameObject puzzleCamera;
+    public GameObject blueKey;
 
     private void Update()
     {
@@ -105,6 +106,7 @@ public class CodePuzzle : MonoBehaviour
         {
             Debug.Log("CorrectCheck!");
             gameObject.layer = 0;
+            blueKey.SetActive(true);
         }
         else
         {

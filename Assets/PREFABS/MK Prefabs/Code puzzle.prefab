@@ -454,10 +454,8 @@ GameObject:
   - component: {fileID: 1660657218768608259}
   - component: {fileID: 4535690718509308608}
   - component: {fileID: 3367976286826520902}
-  - component: {fileID: 212365201831357698}
-  - component: {fileID: 7247176261306538092}
   - component: {fileID: 502918651549316089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Code puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,48 +534,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &212365201831357698
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8074251487930586335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &7247176261306538092
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8074251487930586335}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &502918651549316089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,3 +559,4 @@ MonoBehaviour:
   - {fileID: 6077910032611070302}
   - {fileID: 3595927042510128794}
   puzzleCamera: {fileID: 2764996720253802510}
+  blueKey: {fileID: 0}
