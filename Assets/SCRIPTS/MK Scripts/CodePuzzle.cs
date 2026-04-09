@@ -17,38 +17,36 @@ public class CodePuzzle : MonoBehaviour
     public int listCorrect = 0;
     public CodePuzzlePerSlot[] slots;
     public GameObject puzzleCamera;
+    public GameObject blueKey;
 
     private void Update()
     {
-        Unlock();
-        if (canUnlock && unlocking)
+        if (unlocking)
         {
             ChangeSymbol();
             Cycle();
-        }
-    }
-    void Unlock()
-    {
-        if (canUnlock)
-        {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                player.SetActive(!isPlayerActive);
-                puzzleCamera.SetActive(isPlayerActive);
-                isPlayerActive = !isPlayerActive;
-                unlocking = !unlocking;
-                player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
-                player.GetComponent<FlashlightController>().enabled = !player.GetComponent<FlashlightController>().enabled;
-                for (int i = 0; i < slots.Length; i++)
-                {
-                    if (slots[i].isCorrect)
-                    {
-                        listCorrect++;
-                    }
-                }
-                CorrectCheck();
+                Unlock();
             }
         }
+    }
+    public void Unlock()
+    {
+        player.SetActive(!isPlayerActive);
+        puzzleCamera.SetActive(isPlayerActive);
+        isPlayerActive = !isPlayerActive;
+        unlocking = !unlocking;
+        player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
+        player.GetComponent<FlashlightController>().enabled = !player.GetComponent<FlashlightController>().enabled;
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].isCorrect)
+            {
+                listCorrect++;
+            }
+        }
+        CorrectCheck();
     }
     void ChangeSymbol()
     {
@@ -107,13 +105,14 @@ public class CodePuzzle : MonoBehaviour
         if (listCorrect == numberOfSlots)
         {
             Debug.Log("CorrectCheck!");
-            this.enabled = false;
+            gameObject.layer = 0;
+            blueKey.SetActive(true);
         }
         else
         {
             listCorrect = 0;
         }
-    }
+    }/*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Rigidbody>() != null)
@@ -128,4 +127,5 @@ public class CodePuzzle : MonoBehaviour
             canUnlock = false;
         }
     }
+    */
 }

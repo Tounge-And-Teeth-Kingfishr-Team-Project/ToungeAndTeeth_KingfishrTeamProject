@@ -25,20 +25,38 @@ public class RaycastInteraction : MonoBehaviour
                 interactUI.SetActive(true);
             }
 
-            Debug.Log(hit.collider.gameObject.name);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GameObject theHit = hit.collider.gameObject;
-                if (theHit.layer == 7)      //7 is for keys
+                if (theHit.layer == 7)      //7 is for keys (and shovel)
                 {
-                    theHit.GetComponent<Collectable_Manager>().IWasCollected();
-                    theHit.SetActive(false);
+                    theHit.transform.parent.GetComponent<Collectable_Manager>().IWasCollected();
                 }
-                if (theHit.layer == 8)
+                if (theHit.layer == 8)      //8 is for doors (and rubble)
                 {
                     theHit.GetComponent<Doors_Manager>().UnlockDoor();
                 }
+                if (theHit.layer == 9)      //9 is for picture frames
+                {
+                    if (theHit.GetComponent<PictureFrameFall>() != null)
+                    {
+                        theHit.GetComponent<PictureFrameFall>().Fall();
+                    }
+                }
+                if (theHit.layer == 10)     //10 is for the da vinci box
+                {
+                    theHit.GetComponent<CodePuzzle>().Unlock();
+                }
+                if (theHit.layer == 11)     //11 is for globes
+                {
+                    theHit.GetComponent<MoonInteract>().RotateMoon();
+                }
+                if (theHit.layer == 12)     //12 is for text notes
+                {
+                    theHit.GetComponent<NoteRead>().ShowNote();
+                }
+                Debug.Log(hit.collider.gameObject.name);
             }
         }
         else
