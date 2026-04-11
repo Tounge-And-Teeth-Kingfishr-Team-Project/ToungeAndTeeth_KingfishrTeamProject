@@ -9,7 +9,7 @@ public class TalkToFireplaceMan : MonoBehaviour
     private GoToNextTrigger goToNextTrigger;
     public TextMeshProUGUI textComponent;
     public GameObject uiPanel;
-    public Rigidbody playerRB;
+    public GameObject player;
     public bool canTalk = false;
     public bool isTalking = false;
     public string[] lines;
@@ -23,6 +23,7 @@ public class TalkToFireplaceMan : MonoBehaviour
     }
     void Update()
     {
+        /*
         if (canTalk)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -34,6 +35,7 @@ public class TalkToFireplaceMan : MonoBehaviour
                 }
             }
         }
+        */
         if (canTalk && isTalking)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -49,12 +51,15 @@ public class TalkToFireplaceMan : MonoBehaviour
                 }
             }
         }
+
     }
     public void StartDialogue()
     {
+        lines = goToNextTrigger.dialogues[goToNextTrigger.currentTrigger].dialogue;
         canTalk = true;
         isTalking = true;
-        playerRB.angularVelocity = Vector3.zero;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         if (index == -1)
         {
             uiPanel.SetActive(true);
@@ -86,6 +91,7 @@ public class TalkToFireplaceMan : MonoBehaviour
         {
             index = -1;
             uiPanel.SetActive(false);
+            player.GetComponent<PlayerMovement>().enabled = true;
             textComponent.text = string.Empty;
             isTalking = false;
         }

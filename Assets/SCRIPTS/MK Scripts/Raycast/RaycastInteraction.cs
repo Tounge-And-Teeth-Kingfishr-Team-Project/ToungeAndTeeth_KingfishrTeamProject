@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class RaycastInteraction : MonoBehaviour
 {
+    public PlayerMovement player;
     public MK_KeyManager keyManager;
     public float maxDistance = 100;
     public LayerMask layersToHit;
@@ -11,6 +12,7 @@ public class RaycastInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player = transform.parent.GetComponent<PlayerMovement>();
         interactUI.SetActive(false);
         CheckForInteract();
     }
@@ -55,6 +57,19 @@ public class RaycastInteraction : MonoBehaviour
                 if (theHit.layer == 12)     //12 is for text notes
                 {
                     theHit.GetComponent<NoteRead>().ShowNote();
+                    player.enabled = !player.enabled;
+                }
+                if (theHit.layer == 13)     //13 is for the UV light
+                {
+
+                }
+                if (theHit.layer == 14)     //14 is for mirror shards
+                {
+
+                }
+                if (theHit.layer == 15)     //15 is for the Fireplace Man
+                {
+                    theHit.GetComponent<TalkToFireplaceMan>().StartDialogue();
                 }
                 Debug.Log(hit.collider.gameObject.name);
             }
