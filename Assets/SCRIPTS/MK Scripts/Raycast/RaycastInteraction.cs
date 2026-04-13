@@ -3,17 +3,21 @@ using UnityEngine;
 public class RaycastInteraction : MonoBehaviour
 {
     public PlayerMovement player;
+    public FlashlightController flashlightController;
     public MK_KeyManager keyManager;
     public float maxDistance = 100;
     public LayerMask layersToHit;
     public GameObject interactUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
+    private void Start()
+    {
+        player = transform.parent.GetComponent<PlayerMovement>();
+        flashlightController = transform.parent.GetComponent<FlashlightController>();
+        interactUI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
-        player = transform.parent.GetComponent<PlayerMovement>();
-        interactUI.SetActive(false);
         CheckForInteract();
     }
     void CheckForInteract()
@@ -27,7 +31,7 @@ public class RaycastInteraction : MonoBehaviour
                 interactUI.SetActive(true);
             }
 
-
+            //THIS IS ALL THE INTERACTIONS WITH EVERY ITEM IN THE GAME
             if (Input.GetKeyDown(KeyCode.E))
             {
                 GameObject theHit = hit.collider.gameObject;
@@ -61,7 +65,8 @@ public class RaycastInteraction : MonoBehaviour
                 }
                 if (theHit.layer == 13)     //13 is for the UV light
                 {
-
+                    flashlightController.enabled = true;
+                    Destroy(theHit.gameObject);
                 }
                 if (theHit.layer == 14)     //14 is for mirror shards
                 {
