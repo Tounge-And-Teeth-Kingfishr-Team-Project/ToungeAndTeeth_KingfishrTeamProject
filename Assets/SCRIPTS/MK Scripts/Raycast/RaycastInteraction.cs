@@ -5,6 +5,7 @@ public class RaycastInteraction : MonoBehaviour
     public PlayerMovement player;
     public FlashlightController flashlightController;
     public MK_KeyManager keyManager;
+    public MirrorShardsPickup shardManager;
     public float maxDistance = 100;
     public LayerMask layersToHit;
     public GameObject interactUI;
@@ -70,11 +71,17 @@ public class RaycastInteraction : MonoBehaviour
                 }
                 if (theHit.layer == 14)     //14 is for mirror shards
                 {
-
+                    shardManager.number++;
+                    theHit.GetComponent<MirrorShardID>().shardCollected = true;
+                    Destroy(theHit.gameObject);
                 }
                 if (theHit.layer == 15)     //15 is for the Fireplace Man
                 {
                     theHit.GetComponent<TalkToFireplaceMan>().StartDialogue();
+                }
+                if (theHit.layer == 16)     //16 is for the broken mirror for the shards
+                {
+                    theHit.GetComponent<MirrorShardPlace>().Place();
                 }
                 Debug.Log(hit.collider.gameObject.name);
             }
