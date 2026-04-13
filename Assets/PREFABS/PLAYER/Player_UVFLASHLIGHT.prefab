@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 84989955762633840}
   - component: {fileID: 4490872933469937013}
   - component: {fileID: 4947287079094430011}
+  - component: {fileID: 2370190205822974557}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -434,6 +435,27 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &2370190205822974557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180304241413658856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8056598923e57974fa41f9f0aa27c918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1338957970469099642}
+  flashlightController: {fileID: 6045038743992448635}
+  keyManager: {fileID: 0}
+  shardManager: {fileID: 0}
+  maxDistance: 2
+  layersToHit:
+    serializedVersion: 2
+    m_Bits: 130944
+  interactUI: {fileID: 0}
 --- !u!1001 &1909254192174236860
 PrefabInstance:
   m_ObjectHideFlags: 0

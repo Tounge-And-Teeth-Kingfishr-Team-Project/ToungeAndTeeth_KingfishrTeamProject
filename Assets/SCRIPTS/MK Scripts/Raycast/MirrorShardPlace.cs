@@ -1,70 +1,70 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MirrorShardPlace : MonoBehaviour
 {
-    public Mirror_Shard_Manager mirrorShardManager;
-    public MeshRenderer shard1;
-    public MeshRenderer shard2;
-    public MeshRenderer shard3;
-    public MeshRenderer shard4;
-    public MeshRenderer shard5;
-    public MeshRenderer shard6;
-    public MeshRenderer shard7;
-    public MeshRenderer shard8;
+    public MirrorShardsPickup mirrorShardManager;
+    public GameObject[] shards;
+    public int correct = 0;
     void Start()
     {
-        shard1.enabled = false;
-        shard2.enabled = false;
-        shard3.enabled = false;
-        shard4.enabled = false;
-        shard5.enabled = false;
-        shard6.enabled = false;
-        shard7.enabled = false;
-        shard8.enabled = false;
+        foreach (var shard in shards)
+        {
+            shard.SetActive(false);
+        }
     }
-
     // Update is called once per frame
     public void Place()
     {
+        Debug.Log("Mirror shards placed");
         if (mirrorShardManager.mirrorShard1Collected)
         {
-            shard1.enabled = true;
-            mirrorShardManager.mirrorShard1Collected = false;
+            shards[0].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard2Collected)
         {
-            shard2.enabled = true;
-            mirrorShardManager.mirrorShard2Collected = false;
+            shards[1].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard3Collected)
         {
-            shard3.enabled = true;
-            mirrorShardManager.mirrorShard3Collected = false;
+            shards[2].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard4Collected)
         {
-            shard4.enabled = true;
-            mirrorShardManager.mirrorShard4Collected = false;
+            shards[3].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard5Collected)
         {
-            shard5.enabled = true;
-            mirrorShardManager.mirrorShard5Collected = false;
+            shards[4].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard6Collected)
         {
-            shard6.enabled = true;
-            mirrorShardManager.mirrorShard6Collected = false;
+            shards[5].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard7Collected)
         {
-            shard7.enabled = true;
-            mirrorShardManager.mirrorShard7Collected = false;
+            shards[6].SetActive(true);
         }
         if (mirrorShardManager.mirrorShard8Collected)
         {
-            shard8.enabled = true;
-            mirrorShardManager.mirrorShard8Collected = false;
+            shards[7].SetActive(true);
+        }
+        CheckCorrect();
+
+    }
+    void CheckCorrect()
+    {
+        correct = 0;
+        for (int i = 0; i < shards.Length; i++)
+        {
+            if (shards[i].activeSelf)
+            {
+                correct++;
+            }
+        }
+        if (correct == shards.Length)
+        {
+            //LOAD NEXT SCENE
         }
     }
 }

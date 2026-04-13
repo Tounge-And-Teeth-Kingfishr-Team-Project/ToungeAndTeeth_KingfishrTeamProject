@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-45101537387145191
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 9
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MirrorEffect_MAT
+  m_Name: MirrorEffectStatic_MAT
   m_Shader: {fileID: -6465566751694194690, guid: 7e8237c3ef99fa8499385eb513cad395, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -52,21 +39,34 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha_Clip: 0.5
-    - _Animate: 1
+    - _Animate: 0.5
     - _Middle_Fresnel_Power: 1.34
     - _Portal_Effect_Speed: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Specular_Power: 100
+    - _Specular_Power: 30
     - _Speed: 0.5
     - _Voronoi_Cell_Density: 5
-    - _Voronoi_Fresnel_Size: 1
+    - _Voronoi_Fresnel_Size: 2
     - _Voronoi_Speed: 3
     m_Colors:
     - _Dissolve_Edge_Color: {r: 0.5224524, g: 0.3294117, b: 1, a: 1}
     - _Primary_Color: {r: 0.38823527, g: 0, b: 0.47843134, a: 1}
     - _Secondary_Color: {r: 0, g: 0.12371435, b: 0.35849056, a: 1}
-    - _Specular_direction: {r: -0.4, g: 0.6, b: 0, a: 0}
+    - _Specular_direction: {r: 0, g: 0, b: 0, a: 0}
     - _Voronoi_Color: {r: 1, g: 0.43584898, b: 0.6734663, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &2147380472584893357
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
