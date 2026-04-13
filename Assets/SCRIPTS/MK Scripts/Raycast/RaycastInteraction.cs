@@ -14,7 +14,7 @@ public class RaycastInteraction : MonoBehaviour
     {
         player = transform.parent.GetComponent<PlayerMovement>();
         flashlightController = transform.parent.GetComponent<FlashlightController>();
-        interactUI.SetActive(false);
+        if (interactUI != null) interactUI.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -26,11 +26,15 @@ public class RaycastInteraction : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance, layersToHit))
         {
-            if (hit.collider.gameObject.layer != 8)
+            if (interactUI != null)
             {
-                interactUI.transform.position = hit.transform.position;
-                interactUI.SetActive(true);
+                if (hit.collider.gameObject.layer != 8)
+                {
+                    interactUI.transform.position = hit.transform.position;
+                    interactUI.SetActive(true);
+                }
             }
+
 
             //THIS IS ALL THE INTERACTIONS WITH EVERY ITEM IN THE GAME
             if (Input.GetKeyDown(KeyCode.E))
@@ -88,7 +92,10 @@ public class RaycastInteraction : MonoBehaviour
         }
         else
         {
-            interactUI.SetActive(false);
+            if (interactUI != null)
+            {
+                interactUI.SetActive(false);
+            }
         }
     }
 }
