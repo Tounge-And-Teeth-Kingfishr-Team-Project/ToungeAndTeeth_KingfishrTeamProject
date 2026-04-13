@@ -4,11 +4,15 @@ using System.Collections;
 public class UVLensPickup : Interactable
 {
     [Header("Player & Flashlight")]
-    public GameObject playerFlashlightUV;   // Assign the UV light object on the flashlight
+    public FlashlightController playerFlashlightUV;   // Assign the UV light object on the flashlight
 
     [Header("UI")]
     public GameObject controlsUI;           // Controls instructions UI
     public float uiDisplayTime = 3f;        // Seconds to show the UI
+
+    [Header("Renderers")]
+    public MeshRenderer renderer1;
+    public MeshRenderer renderer2;
 
     private bool uvLensCollected = false;
 
@@ -16,7 +20,7 @@ public class UVLensPickup : Interactable
     {
         // Ensure UV light is off at start
         if (playerFlashlightUV != null)
-            playerFlashlightUV.SetActive(false);
+            playerFlashlightUV.enabled = false;
 
         // Hide controls UI
         if (controlsUI != null)
@@ -31,7 +35,7 @@ public class UVLensPickup : Interactable
 
         // Enable the UV light
         if (playerFlashlightUV != null)
-            playerFlashlightUV.SetActive(true);
+            playerFlashlightUV.enabled = true;
 
         // Show controls UI
         if (controlsUI != null)
@@ -45,6 +49,8 @@ public class UVLensPickup : Interactable
         if (col != null) col.enabled = false;
 
         base.Interact(player);
+        if (renderer1 != null) renderer1.enabled = false;
+        if (renderer2 != null) renderer2.enabled = false;
     }
 
     private IEnumerator ShowControlsUI()

@@ -15,52 +15,52 @@ public class PinkDoorDialogue : MonoBehaviour
     private Text dialogueText;          // Standard UI Text
     private TMP_Text dialogueTMPText;   // TextMeshPro
 
-    void Start()
-    {
-        if (dialogueUI != null)
-        {
-            dialogueText = dialogueUI.GetComponent<Text>();
-            dialogueTMPText = dialogueUI.GetComponent<TMP_Text>();
+    //void Start()
+    //{
+    //    if (dialogueUI != null)
+    //    {
+    //        dialogueText = dialogueUI.GetComponent<Text>();
+    //        dialogueTMPText = dialogueUI.GetComponent<TMP_Text>();
 
-            dialogueUI.SetActive(false); // Hide at start
-        }
-        else
-        {
-            Debug.LogError("Dialogue UI GameObject not assigned!");
-        }
-    }
+    //        dialogueUI.SetActive(false); // Hide at start
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("Dialogue UI GameObject not assigned!");
+    //    }
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (hasTriggered) return;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (hasTriggered) return;
 
-        if (other.CompareTag("Player"))
-        {
-            hasTriggered = true;
-            ShowDialogue();
-        }
-    }
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        hasTriggered = true;
+    //        ShowDialogue();
+    //    }
+    //}
 
-    private void ShowDialogue()
-    {
-        if (dialogueUI == null) return;
+    //private void ShowDialogue()
+    //{
+    //    if (dialogueUI == null) return;
 
-        dialogueUI.SetActive(true);
+    //    dialogueUI.SetActive(true);
 
-        if (dialogueText != null)
-            dialogueText.text = dialogueMessage;
+    //    if (dialogueText != null)
+    //        dialogueText.text = dialogueMessage;
 
-        if (dialogueTMPText != null)
-            dialogueTMPText.text = dialogueMessage;
+    //    if (dialogueTMPText != null)
+    //        dialogueTMPText.text = dialogueMessage;
 
-        StartCoroutine(HideDialogueAfterSeconds(displayDuration));
-    }
+    //    StartCoroutine(HideDialogueAfterSeconds(displayDuration));
+    //}
 
-    private IEnumerator HideDialogueAfterSeconds(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
+    //private IEnumerator HideDialogueAfterSeconds(float seconds)
+    //{
+    //    yield return new WaitForSeconds(seconds);
 
-        if (dialogueUI != null)
-            dialogueUI.SetActive(false);
-    }
+    //    if (dialogueUI != null)
+    //        dialogueUI.SetActive(false);
+    //}
 }

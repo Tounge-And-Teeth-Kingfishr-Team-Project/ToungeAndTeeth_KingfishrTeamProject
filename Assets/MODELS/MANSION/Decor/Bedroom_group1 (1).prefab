@@ -1215,6 +1215,7 @@ GameObject:
   - component: {fileID: 7596659904141572004}
   - component: {fileID: 5099344519183615600}
   - component: {fileID: 1309016485883836664}
+  - component: {fileID: 4231221486680238353}
   m_Layer: 0
   m_Name: Bedroom:pCube9
   m_TagString: Untagged
@@ -1290,6 +1291,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4231221486680238353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576272255602322927}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.010000001, y: 0.122710876, z: 0.009999997}
+  m_Center: {x: 0.0000000036531178, y: 0.027563276, z: 0.000000002096008}
 --- !u!1 &8818120608799316169
 GameObject:
   m_ObjectHideFlags: 0

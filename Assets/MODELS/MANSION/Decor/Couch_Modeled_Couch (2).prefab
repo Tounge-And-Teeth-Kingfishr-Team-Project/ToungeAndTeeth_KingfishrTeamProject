@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 6283824697416557817}
   - component: {fileID: 4866962991835619023}
   - component: {fileID: 8473841422594253638}
+  - component: {fileID: 8250025280731948147}
   m_Layer: 0
   m_Name: Couch_Modeled:Couch_Stuffing
   m_TagString: Untagged
@@ -172,6 +173,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8250025280731948147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3251839583072907456}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15462303, y: 0.054590423, z: 0.0664739}
+  m_Center: {x: -0.000622654, y: 0.02457938, z: -0.0034970567}
 --- !u!1 &3516968547429813106
 GameObject:
   m_ObjectHideFlags: 0
