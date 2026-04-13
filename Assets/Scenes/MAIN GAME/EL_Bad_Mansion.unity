@@ -1769,7 +1769,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mirror_Frame
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5894646814833453745, guid: f7dcf02ed5b128b41b81bfb41bf15c11, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1882,6 +1883,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &864254668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 16144642280798946, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
+  m_PrefabInstance: {fileID: 1699766718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &864254670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864254668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e67b61014071b2409abd2a1cfac0c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRadius: 2
+  interactPrompt: Press E to interact
+  uiPrompt: {fileID: 0}
+  playerInRange: 0
+  sceneIndex: 5
 --- !u!1001 &908955126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3620,7 +3643,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5165283667228096356, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
       insertIndex: 13
       addedObject: {fileID: 1532392857}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 16144642280798946, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 864254670}
   m_SourcePrefab: {fileID: 100100000, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
 --- !u!1 &1734677223 stripped
 GameObject:
