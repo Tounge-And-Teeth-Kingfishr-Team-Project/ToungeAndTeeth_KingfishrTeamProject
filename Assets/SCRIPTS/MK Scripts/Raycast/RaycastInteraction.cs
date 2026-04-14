@@ -87,6 +87,10 @@ public class RaycastInteraction : MonoBehaviour
                 {
                     theHit.GetComponent<MirrorShardPlace>().Place();
                 }
+                if (theHit.layer == 17)     //17 is for the entrance door
+                {
+                    theHit.GetComponent<EntranceDoor>().OpenDoor();
+                }
                 Debug.Log(hit.collider.gameObject.name);
             }
         }
