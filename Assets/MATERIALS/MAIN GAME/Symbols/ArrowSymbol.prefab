@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7095461563062491348}
   - component: {fileID: 2211504434594916982}
-  - component: {fileID: 5784272388753686131}
+  - component: {fileID: 4157073612370024374}
+  - component: {fileID: 1158373023215062699}
   m_Layer: 6
   m_Name: ArrowSymbol
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5784272388753686131
+--- !u!114 &4157073612370024374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,10 +98,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4405539351927445672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1636c81b13877a644b8b2ceb720c4b36, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ddd7788c27240e4592a087481455762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  revealRadius: 5
-  uvLayer:
+--- !u!65 &1158373023215062699
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4405539351927445672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.999998, y: 19.999998, z: 0.19999999}
+  m_Center: {x: 0, y: 0, z: 0}
