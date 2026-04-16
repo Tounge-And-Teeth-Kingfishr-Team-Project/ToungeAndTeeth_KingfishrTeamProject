@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3376247077768492228}
   - component: {fileID: 8274038518279807374}
-  - component: {fileID: -3936629403394423495}
-  - component: {fileID: 3923387945233464572}
+  - component: {fileID: 3126519943381189038}
   m_Layer: 6
   m_Name: HandPrintSymbol (1)
   m_TagString: Untagged
@@ -89,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3936629403394423495
+--- !u!114 &3126519943381189038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,27 +97,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834504912961095813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ddd7788c27240e4592a087481455762, type: 3}
+  m_Script: {fileID: 11500000, guid: 1636c81b13877a644b8b2ceb720c4b36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &3923387945233464572
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834504912961095813}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  revealRadius: 5
+  uvLayer:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 20.000002, y: 20.000002, z: 0.20000148}
-  m_Center: {x: 0, y: -0.000030517578, z: 0}
+    m_Bits: 64
