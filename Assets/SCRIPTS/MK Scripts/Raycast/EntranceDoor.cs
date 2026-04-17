@@ -19,9 +19,12 @@ public class EntranceDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (key.collected)
+        if (key != null)
         {
-            canOpen = true;
+            if (key.collected)
+            {
+                canOpen = true;
+            }
         }
     }
     public void OpenDoor()
