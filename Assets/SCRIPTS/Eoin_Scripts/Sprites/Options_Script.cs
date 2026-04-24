@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Options_Script : MonoBehaviour
@@ -7,6 +8,7 @@ public class Options_Script : MonoBehaviour
     public GameObject optionsScene;
     public GameObject titleScene;
     public bool optionsOn;
+    public int sceneIndex = -1;
     void Start()
     {
         optionsScene.SetActive(false);
@@ -20,6 +22,11 @@ public class Options_Script : MonoBehaviour
         //{ 
            
         //}
+    }
+
+    public void PressStart()
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void OnClick()
