@@ -28,11 +28,15 @@ public class RaycastInteraction : MonoBehaviour
         {
             if (interactUI != null)
             {
-                if (hit.collider.gameObject.layer != 8)
+                if (hit.collider.gameObject.layer != 8 && hit.collider.gameObject.layer != 15)
                 {
                     interactUI.transform.position = hit.transform.position;
-                    interactUI.SetActive(true);
                 }
+                else
+                {
+                    interactUI.transform.position = hit.collider.gameObject.transform.Find("UI Here").position;
+                }
+                interactUI.SetActive(true);
             }
 
 

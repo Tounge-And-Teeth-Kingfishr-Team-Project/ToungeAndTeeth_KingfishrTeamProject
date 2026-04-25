@@ -28,27 +28,33 @@ public class Doors_Manager : MonoBehaviour
 
     private void Start()
     {
-        lockedUI.SetActive(false);
+        if (lockedUI != null)
+        {
+            lockedUI.SetActive(false);
+        }
         closedRotation = transform.rotation;
         openRotation = closedRotation * Quaternion.Euler(0, rotationAmount, 0);
     }
     private void Update()
     {
-        if (color == WhichKey.Yellow)
+        if (keyManager != null)
         {
-            if (keyManager.yellowKey) canUnlock = true;
-        }
-        else if (color == WhichKey.Blue)
-        {
-            if (keyManager.blueKey) canUnlock = true;
-        }
-        else if (color == WhichKey.Pink)
-        {
-            if (keyManager.pinkKey) canUnlock = true;
-        }
-        else if (color == WhichKey.Shovel)
-        {
-            if (keyManager.shovel) canUnlock = true;
+            if (color == WhichKey.Yellow)
+            {
+                if (keyManager.yellowKey) canUnlock = true;
+            }
+            else if (color == WhichKey.Blue)
+            {
+                if (keyManager.blueKey) canUnlock = true;
+            }
+            else if (color == WhichKey.Pink)
+            {
+                if (keyManager.pinkKey) canUnlock = true;
+            }
+            else if (color == WhichKey.Shovel)
+            {
+                if (keyManager.shovel) canUnlock = true;
+            }
         }
     }
     public void UnlockDoor()
@@ -56,21 +62,24 @@ public class Doors_Manager : MonoBehaviour
         if (canUnlock)
         {
             unlocked = true;
-            if (color == WhichKey.Yellow)
+            if (keyManager != null)
             {
-                keyManager.yellowKeyManager.UIIcon.SetActive(false);
-            }
-            else if (color == WhichKey.Blue)
-            {
-                keyManager.blueKeyManager.UIIcon.SetActive(false);
-            }
-            else if (color == WhichKey.Pink)
-            {
-                keyManager.pinkKeyManager.UIIcon.SetActive(false);
-            }
-            else if (color == WhichKey.Shovel)
-            {
-                keyManager.shovelManager.UIIcon.SetActive(false);
+                if (color == WhichKey.Yellow)
+                {
+                    keyManager.yellowKeyManager.UIIcon.SetActive(false);
+                }
+                else if (color == WhichKey.Blue)
+                {
+                    keyManager.blueKeyManager.UIIcon.SetActive(false);
+                }
+                else if (color == WhichKey.Pink)
+                {
+                    keyManager.pinkKeyManager.UIIcon.SetActive(false);
+                }
+                else if (color == WhichKey.Shovel)
+                {
+                    keyManager.shovelManager.UIIcon.SetActive(false);
+                }
             }
             if (color != WhichKey.Shovel)
             {
