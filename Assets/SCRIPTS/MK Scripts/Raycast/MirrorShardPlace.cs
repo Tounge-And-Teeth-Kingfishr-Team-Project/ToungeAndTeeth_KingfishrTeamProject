@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MirrorShardPlace : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class MirrorShardPlace : MonoBehaviour
         }
         if (correct == shards.Length)
         {
-            //LOAD NEXT SCENE
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

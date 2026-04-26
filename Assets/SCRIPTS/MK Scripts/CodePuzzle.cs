@@ -21,9 +21,11 @@ public class CodePuzzle : MonoBehaviour
     public GameObject boxLid;
     public GameObject UIindicator;
     public GameObject[] UIindicatorList;
+    public GameObject exitUI;
     public GameObject blueKey;
     private void Start()
     {
+        exitUI.SetActive(false);
         UIindicator.SetActive(false);
     }
     private void Update()
@@ -43,6 +45,7 @@ public class CodePuzzle : MonoBehaviour
         player.SetActive(!isPlayerActive);
         puzzleCamera.SetActive(isPlayerActive);
         UIindicator.SetActive(isPlayerActive);
+        exitUI.SetActive(isPlayerActive);
         isPlayerActive = !isPlayerActive;
         unlocking = !unlocking;
         player.GetComponent<PlayerMovement>().enabled = !player.GetComponent<PlayerMovement>().enabled;
