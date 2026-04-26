@@ -28,7 +28,7 @@ public class RaycastInteraction : MonoBehaviour
         {
             if (interactUI != null)
             {
-                if (hit.collider.gameObject.layer != 8 && hit.collider.gameObject.layer != 15)
+                if (hit.collider.gameObject.layer != 8 && hit.collider.gameObject.layer != 15 && hit.collider.gameObject.layer != 17)
                 {
                     interactUI.transform.position = hit.transform.position;
                 }

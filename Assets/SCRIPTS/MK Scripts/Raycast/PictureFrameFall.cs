@@ -15,8 +15,9 @@ public class PictureFrameFall : MonoBehaviour
     {
         rb.isKinematic = false;
         theCollider.enabled = false;
-        rb.AddForce(1f, 0, 10f, ForceMode.Impulse);
+        rb.AddForce(1f, 0, 1f, ForceMode.Impulse);
         theCollider.enabled = true;
         yellowKey.SetActive(true);
+        Destroy(this);
     }
 }
