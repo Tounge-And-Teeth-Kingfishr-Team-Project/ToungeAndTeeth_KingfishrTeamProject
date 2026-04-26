@@ -1508,6 +1508,11 @@ MonoBehaviour:
   canOpen: 1
   lockedUI: {fileID: 2826489566602718843}
   lockedUIDialogueTime: 3
+--- !u!4 &1162259626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 611651292213903122, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
+  m_PrefabInstance: {fileID: 1699766718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210406070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1634,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &1258542579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2758925457728525921, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
+  m_PrefabInstance: {fileID: 537896082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1289439541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1492107846427110377, guid: d1d9f1da3fe57284c943f66bb704a5b8, type: 3}
@@ -1815,6 +1825,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8217460626905491033, guid: b669dfef3a4cfb246a0db0cc5b65bc97, type: 3}
   m_PrefabInstance: {fileID: 1532392856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1538097615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538097616}
+  m_Layer: 17
+  m_Name: UI Here
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538097616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538097615}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1162259626}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1592774374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5165283667228096356, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
@@ -1992,6 +2033,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5165283667228096356, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
       insertIndex: 13
       addedObject: {fileID: 1532392857}
+    - targetCorrespondingSourceObject: {fileID: 611651292213903122, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1538097616}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 776789854315383323, guid: cb600a0d5b425d7458f43fb878239792, type: 3}
       insertIndex: -1
@@ -4079,7 +4123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2517793101065436399}
   m_Layer: 0
-  m_Name: Puzzles
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4111,7 +4155,7 @@ LookAtConstraint:
   m_Active: 1
   m_IsLocked: 0
   m_Sources:
-  - sourceTransform: {fileID: 0}
+  - sourceTransform: {fileID: 1258542579}
     weight: 1
 --- !u!1 &2231286439099194463
 GameObject:
@@ -4235,7 +4279,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2826489566602718843}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.028761232, y: 0.58451796, z: -0.020739377, w: 0.81060565}
   m_LocalPosition: {x: 0, y: 0, z: -4.6}
   m_LocalScale: {x: -0.0050000018, y: 0.004999999, z: 0.0050000013}
   m_ConstrainProportionsScale: 0
@@ -4477,7 +4521,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
