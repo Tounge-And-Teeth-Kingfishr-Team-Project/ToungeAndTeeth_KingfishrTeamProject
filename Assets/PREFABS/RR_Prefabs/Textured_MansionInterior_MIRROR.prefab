@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1805975989075101075}
   uiPanel: {fileID: 860863589652605388}
-  playerRB: {fileID: 0}
+  player: {fileID: 0}
   canTalk: 0
   isTalking: 0
   lines: []
@@ -14486,7 +14486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438898723509374108, guid: 2668258d629474047b4eb801a7e58fab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.9439998
+      value: 3.9542
       objectReference: {fileID: 0}
     - target: {fileID: 4438898723509374108, guid: 2668258d629474047b4eb801a7e58fab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18341,6 +18341,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4651478123691255650, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fb3d24a5762aee14bbe53eba1608a86a, type: 2}
     - target: {fileID: 7483798606198750450, guid: 4ccf8a3ea4888d047b4d37e075a7f224, type: 3}
       propertyPath: m_Name
       value: Bookshelf_V1_DONE (1)
@@ -23274,6 +23278,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bookshelf_V3_DONE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8609964247857296295, guid: 30435f03084a77b47b642a56d5913ed2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f148f423cfc79d40a730ad7f69b0818, type: 2}
+    - target: {fileID: 8609964247857296295, guid: 30435f03084a77b47b642a56d5913ed2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13f5f940c30527b498361e921e0fe3ba, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30832,7 +30844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8099281808441873914, guid: c21ce56106fcab84ab762f39be6ef48e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.217
+      value: 20.244
       objectReference: {fileID: 0}
     - target: {fileID: 8099281808441873914, guid: c21ce56106fcab84ab762f39be6ef48e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32957,6 +32969,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bookshelf_V3_DONE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8609964247857296295, guid: 30435f03084a77b47b642a56d5913ed2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f148f423cfc79d40a730ad7f69b0818, type: 2}
+    - target: {fileID: 8609964247857296295, guid: 30435f03084a77b47b642a56d5913ed2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 13f5f940c30527b498361e921e0fe3ba, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
