@@ -2082,7 +2082,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7811468565005171071, guid: 1ebeed43585abb24fb2f0a7019f17b7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1246798914}
   m_SourcePrefab: {fileID: 100100000, guid: 1ebeed43585abb24fb2f0a7019f17b7f, type: 3}
 --- !u!1 &256010553
 GameObject:
@@ -4550,6 +4553,7 @@ GameObject:
   - component: {fileID: 495543404}
   - component: {fileID: 495543406}
   - component: {fileID: 495543405}
+  - component: {fileID: 495543407}
   m_Layer: 0
   m_Name: JailBar_TopAndBottom (1)
   m_TagString: Untagged
@@ -4625,6 +4629,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495543403}
   m_Mesh: {fileID: 7109700914960352218, guid: f1a7260311e9fd0448ee7c2cd19604a3, type: 3}
+--- !u!65 &495543407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495543403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15093602, y: 0.31950969, z: 0.009999999}
+  m_Center: {x: -0.00000023841858, y: -0.000000014901161, z: 0.000000029802322}
 --- !u!1 &509322833
 GameObject:
   m_ObjectHideFlags: 0
@@ -10814,6 +10839,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238305819}
   m_Mesh: {fileID: 9078647314086403569, guid: ae5fc1e0c44ab3f44a12c7d3d7316e86, type: 3}
+--- !u!1 &1246798912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7811468565005171071, guid: 1ebeed43585abb24fb2f0a7019f17b7f, type: 3}
+  m_PrefabInstance: {fileID: 254879887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1246798914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246798912}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07162241, y: 0.026103245, z: 0.034687474}
+  m_Center: {x: -0.0028483358, y: -0.012674275, z: 0.006027756}
 --- !u!1 &1258063787
 GameObject:
   m_ObjectHideFlags: 0
@@ -15948,6 +15999,7 @@ GameObject:
   - component: {fileID: 2030633763}
   - component: {fileID: 2030633765}
   - component: {fileID: 2030633764}
+  - component: {fileID: 2030633766}
   m_Layer: 0
   m_Name: JailBar_TopAndBottom (2)
   m_TagString: Untagged
@@ -16023,6 +16075,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030633762}
   m_Mesh: {fileID: 7109700914960352218, guid: f1a7260311e9fd0448ee7c2cd19604a3, type: 3}
+--- !u!65 &2030633766
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030633762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15093602, y: 0.31950969, z: 0.009999999}
+  m_Center: {x: 0, y: -0.000000014901161, z: 0.000000029802322}
 --- !u!1 &2033121630
 GameObject:
   m_ObjectHideFlags: 0
@@ -16840,6 +16913,7 @@ GameObject:
   - component: {fileID: 2661453868509185967}
   - component: {fileID: 6393775988107707719}
   - component: {fileID: 7486865769198069189}
+  - component: {fileID: 7486865769198069190}
   m_Layer: 0
   m_Name: JailBar_TopAndBottom
   m_TagString: Untagged
@@ -17002,6 +17076,7 @@ GameObject:
   - component: {fileID: 3424170916350872798}
   - component: {fileID: 3058765464630616823}
   - component: {fileID: 7332814827465236802}
+  - component: {fileID: 7332814827465236803}
   m_Layer: 0
   m_Name: TortureChair
   m_TagString: Untagged
@@ -19162,6 +19237,7 @@ GameObject:
   - component: {fileID: 1849844162869302125}
   - component: {fileID: 9069334187925906891}
   - component: {fileID: 9201531671008575955}
+  - component: {fileID: 9201531671008575956}
   m_Layer: 0
   m_Name: WallChain_Pipe
   m_TagString: Untagged
@@ -21234,6 +21310,7 @@ GameObject:
   - component: {fileID: 8025141733079911167}
   - component: {fileID: 5468932616737755570}
   - component: {fileID: 7002517652303701136}
+  - component: {fileID: 8025141733079911168}
   m_Layer: 0
   m_Name: TortureBed
   m_TagString: Untagged
@@ -21649,6 +21726,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7332814827465236803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271308731273948664}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.059608996, y: 0.13973759, z: 0.07058459}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
 --- !u!33 &7372953033749923616
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21728,6 +21826,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7486865769198069190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67062724641898958}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15093602, y: 0.31950969, z: 0.009999999}
+  m_Center: {x: 0.00000023841858, y: -0.000000014901161, z: 0.000000029802322}
 --- !u!1 &7578619591824676477
 GameObject:
   m_ObjectHideFlags: 0
@@ -21779,6 +21898,7 @@ GameObject:
   - component: {fileID: 7186955944040389695}
   - component: {fileID: 5175645985633376487}
   - component: {fileID: 2891020394319155947}
+  - component: {fileID: 7623786747181423416}
   m_Layer: 0
   m_Name: JailDoor
   m_TagString: Untagged
@@ -21786,6 +21906,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7623786747181423416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7623786747181423415}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.092714004, y: 0.1488819, z: 0.0098866755}
+  m_Center: {x: 0.000000117346644, y: -0.000000007450581, z: 0}
 --- !u!33 &7634429636016622625
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21813,6 +21954,7 @@ GameObject:
   - component: {fileID: 784834788966312408}
   - component: {fileID: 28188307147579224}
   - component: {fileID: 3648668056591813171}
+  - component: {fileID: 7660611038833448858}
   m_Layer: 0
   m_Name: ToolTable
   m_TagString: Untagged
@@ -21820,6 +21962,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7660611038833448858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660611038833448857}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.053500533, y: 0.073364824, z: 0.14133903}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0}
 --- !u!4 &7661699792098163174
 Transform:
   m_ObjectHideFlags: 0
@@ -22019,6 +22182,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 274456539928966085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8025141733079911168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754094971491041846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12010236, y: 0.093471676, z: 0.28572267}
+  m_Center: {x: 0.00000023841858, y: -0.000000007450581, z: -0.000000029802322}
 --- !u!1 &8081578659373917083
 GameObject:
   m_ObjectHideFlags: 0
@@ -22861,6 +23045,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9201531671008575956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353358403007651333}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16855282, y: 0.004705924, z: 0.004475617}
+  m_Center: {x: 0, y: -0.000000013620593, z: 2.3283062e-10}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
