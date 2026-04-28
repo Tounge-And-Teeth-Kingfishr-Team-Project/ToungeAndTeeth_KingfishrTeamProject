@@ -404,8 +404,8 @@ GameObject:
   - component: {fileID: 2005437147996186293}
   - component: {fileID: 7113204175016539866}
   - component: {fileID: 4587013848280961826}
-  - component: {fileID: 3516906160420370772}
-  m_Layer: 0
+  - component: {fileID: 551432893950985018}
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,6 +427,7 @@ Transform:
   m_Children:
   - {fileID: 3340056505872832098}
   - {fileID: 5032131249630453330}
+  - {fileID: 4906721406140752105}
   m_Father: {fileID: 4558513741406521372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2005437147996186293
@@ -503,7 +504,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.21078457, y: 0.4774359, z: 0.021998754}
   m_Center: {x: -0.105392136, y: -0.000000074505806, z: 0.000000017695132}
---- !u!114 &3516906160420370772
+--- !u!114 &551432893950985018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,15 +513,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3773568525247343119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
+  m_Script: {fileID: 11500000, guid: e8a06a3e289632147bed42a4d59cf01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 3955527480789409542}
-  openAngle: 90
+  color: 0
+  unlocked: 1
+  canUnlock: 1
+  keyManager: {fileID: 0}
+  lockedUI: {fileID: 0}
+  lockedUIDialogueTime: 3
+  rotationAmount: 50
   openSpeed: 3
 --- !u!1 &3963288843832808200
 GameObject:
@@ -1106,6 +1108,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6396533096737407572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4906721406140752105}
+  m_Layer: 0
+  m_Name: UI Here
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4906721406140752105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396533096737407572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3955527480789409542}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7269213286708630442
 GameObject:
   m_ObjectHideFlags: 0

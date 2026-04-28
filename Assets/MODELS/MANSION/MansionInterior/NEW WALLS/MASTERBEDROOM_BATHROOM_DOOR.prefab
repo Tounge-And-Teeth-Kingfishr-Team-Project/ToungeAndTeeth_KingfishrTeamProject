@@ -1626,7 +1626,7 @@ GameObject:
   - component: {fileID: 5700616762163554821}
   - component: {fileID: 3926922591493012074}
   - component: {fileID: 7737269933312024466}
-  - component: {fileID: 3636576683917090344}
+  - component: {fileID: 2622695076784442147}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1725,7 +1725,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.21078457, y: 0.4774359, z: 0.021998754}
   m_Center: {x: -0.105392136, y: -0.000000074505806, z: 0.000000017695132}
---- !u!114 &3636576683917090344
+--- !u!114 &2622695076784442147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1734,15 +1734,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6959889210270312127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
+  m_Script: {fileID: 11500000, guid: e8a06a3e289632147bed42a4d59cf01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 0}
-  openAngle: 90
+  color: 0
+  unlocked: 1
+  canUnlock: 1
+  keyManager: {fileID: 0}
+  lockedUI: {fileID: 0}
+  lockedUIDialogueTime: 3
+  rotationAmount: 90
   openSpeed: 3
 --- !u!1 &7190129830739206072
 GameObject:

@@ -26341,30 +26341,12 @@ PrefabInstance:
       insertIndex: 16
       addedObject: {fileID: 7676080005693206482}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8137344400155829224, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419044640728357697}
-    - targetCorrespondingSourceObject: {fileID: 3893779461989758215, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4087072544184683825}
-    - targetCorrespondingSourceObject: {fileID: 2203322057904322575, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6331240051638047039}
     - targetCorrespondingSourceObject: {fileID: 6388162637777764301, guid: 8c85399dce245b34284d397926432bc6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2668981338777177797}
-    - targetCorrespondingSourceObject: {fileID: 3300293691371500365, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6975964463325165197}
     - targetCorrespondingSourceObject: {fileID: 7456588073187062795, guid: 8c85399dce245b34284d397926432bc6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2622142084443611326}
-    - targetCorrespondingSourceObject: {fileID: 9178078125161578880, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5708398666790884978}
-    - targetCorrespondingSourceObject: {fileID: 5823140751385009481, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7393910282307083483}
   m_SourcePrefab: {fileID: 100100000, guid: 8c85399dce245b34284d397926432bc6, type: 3}
 --- !u!4 &355878983283166475 stripped
 Transform:
@@ -26405,35 +26387,6 @@ MonoBehaviour:
   doorToRotate: {fileID: 1541654965932425610}
   openAngle: 90
   openSpeed: 3
---- !u!4 &2093519331724059406 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5941726154475857984, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2285329834376336903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5823140751385009481, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7393910282307083483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2285329834376336903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 2093519331724059406}
-  openAngle: -90
-  openSpeed: 3
 --- !u!1 &2883415994792394565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7456588073187062795, guid: 8c85399dce245b34284d397926432bc6, type: 3}
@@ -26463,154 +26416,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7332331356773630210, guid: 8c85399dce245b34284d397926432bc6, type: 3}
   m_PrefabInstance: {fileID: 5726587276247239502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3470016521033943758 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9178078125161578880, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5708398666790884978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3470016521033943758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 3647153160444641223}
-  openAngle: 90
-  openSpeed: 3
---- !u!4 &3647153160444641223 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9071840302175876233, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4409015835716853167 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8239076323960854241, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4581651033585903782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8137344400155829224, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &419044640728357697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4581651033585903782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 4409015835716853167}
-  openAngle: 100
-  openSpeed: 3
 --- !u!4 &4974770340160773820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 752386517469730290, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5902857321718379329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2203322057904322575, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6331240051638047039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5902857321718379329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 6003749825976174152}
-  openAngle: -90
-  openSpeed: 3
---- !u!4 &6003749825976174152 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2029283266735017222, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6921646375794756874 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3420005069572064836, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7112331053742962691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3300293691371500365, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6975964463325165197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7112331053742962691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 6921646375794756874}
-  openAngle: 120
-  openSpeed: 3
---- !u!1 &8750941590473768521 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3893779461989758215, guid: 8c85399dce245b34284d397926432bc6, type: 3}
-  m_PrefabInstance: {fileID: 5726587276247239502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4087072544184683825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8750941590473768521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8879d9685ec822840a8117de3248debe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: 3
-  interactPrompt: Press E to interact
-  uiPrompt: {fileID: 0}
-  playerInRange: 0
-  doorToRotate: {fileID: 8920264026515606336}
-  openAngle: -90
-  openSpeed: 3
---- !u!4 &8920264026515606336 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3797598914812936206, guid: 8c85399dce245b34284d397926432bc6, type: 3}
   m_PrefabInstance: {fileID: 5726587276247239502}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &9213088746562099171 stripped
