@@ -749,6 +749,7 @@ MonoBehaviour:
   - {fileID: 1213056888}
   objectsToSwitchOff:
   - {fileID: 2082539302}
+  - {fileID: 1094559214}
   player: {fileID: 1856182063}
   cutscene: {fileID: 480228883}
   timelineSpeed: 0.5
@@ -4040,7 +4041,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 32aa7cb1d00804948adfa48f6dd4414d, type: 2}
     - target: {fileID: 4360468524842316780, guid: bd2bdc2d94321c747b2c30863be4331c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4410213566147270920, guid: bd2bdc2d94321c747b2c30863be4331c, type: 3}
       propertyPath: m_Mesh
@@ -5388,6 +5389,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065614656}
   m_Mesh: {fileID: -3646720056847634501, guid: 14819bbf210512e4d85f0d1ebe09f692, type: 3}
+--- !u!1 &1094559214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 49433490828726076, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
+  m_PrefabInstance: {fileID: 1195213555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160655869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5513,6 +5519,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49433490828726076, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 143895445368005705, guid: 195884efa5b0b424aa14710d7adeeadf, type: 3}
       propertyPath: m_Intensity
       value: 0.7
