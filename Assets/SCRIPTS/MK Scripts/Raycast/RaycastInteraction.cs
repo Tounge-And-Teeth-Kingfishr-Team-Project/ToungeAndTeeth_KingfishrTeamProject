@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class RaycastInteraction : MonoBehaviour
@@ -9,12 +10,16 @@ public class RaycastInteraction : MonoBehaviour
     public float maxDistance = 100;
     public LayerMask layersToHit;
     public GameObject interactUI;
+
+    public float uiDisplayTime = 3f;        // Seconds to show the UI
+    public GameObject flashlightInstructionsUI;     //UI for flashlight instructions
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         player = transform.parent.GetComponent<PlayerMovement>();
         flashlightController = transform.parent.GetComponent<FlashlightController>();
         if (interactUI != null) interactUI.SetActive(false);
+        if (flashlightInstructionsUI != null) flashlightInstructionsUI.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -75,6 +80,7 @@ public class RaycastInteraction : MonoBehaviour
                 if (theHit.layer == 13)     //13 is for the UV light
                 {
                     flashlightController.enabled = true;
+                    StartCoroutine(ShowControlsUI());
                     Destroy(theHit.gameObject);
                 }
                 if (theHit.layer == 14)     //14 is for mirror shards
@@ -105,5 +111,11 @@ public class RaycastInteraction : MonoBehaviour
                 interactUI.SetActive(false);
             }
         }
+    }
+    private IEnumerator ShowControlsUI()
+    {
+        flashlightInstructionsUI.SetActive(true);
+        yield return new WaitForSeconds(uiDisplayTime);
+        flashlightInstructionsUI.SetActive(false);
     }
 }
