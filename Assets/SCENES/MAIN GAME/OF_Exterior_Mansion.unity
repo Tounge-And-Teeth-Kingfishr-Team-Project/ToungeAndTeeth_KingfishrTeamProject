@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  m_FogColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.002
+  m_FogDensity: 0.001
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.092559636, g: 0.10524612, b: 0.3018868, a: 1}
+  m_AmbientSkyColor: {r: 0.06594873, g: 0.07609975, b: 0.24528301, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.52
@@ -33417,7 +33417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754783350687008930, guid: 43bb926ed5cf02a4293af44d7be9179a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.41
+      value: 5.32
       objectReference: {fileID: 0}
     - target: {fileID: 5754783350687008930, guid: 43bb926ed5cf02a4293af44d7be9179a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41202,6 +41202,10 @@ PrefabInstance:
     - target: {fileID: 754042490334488524, guid: fe3c2e3d887bdfb4fbf4aa354c5d2fa6, type: 3}
       propertyPath: m_CastShadows
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338957970469099642, guid: fe3c2e3d887bdfb4fbf4aa354c5d2fa6, type: 3}
+      propertyPath: MoveSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1638854257257331181, guid: fe3c2e3d887bdfb4fbf4aa354c5d2fa6, type: 3}
       propertyPath: m_IsActive
@@ -79651,6 +79655,7 @@ GameObject:
   - component: {fileID: 6712703301326638403}
   - component: {fileID: 166916123051358040}
   - component: {fileID: 3532394506856737474}
+  - component: {fileID: 7009130933737733317}
   m_Layer: 0
   m_Name: BackDoor_Porch
   m_TagString: Untagged
@@ -79658,6 +79663,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7009130933737733317
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009130933737733316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3616309797991474115, guid: bea8bc338933436498d43cd67bd2f959, type: 3}
 --- !u!23 &7015279598528124029
 MeshRenderer:
   m_ObjectHideFlags: 0
